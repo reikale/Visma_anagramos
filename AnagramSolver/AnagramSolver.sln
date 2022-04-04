@@ -1,8 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramSolver.Cli", "AnagramSolver.Cli\AnagramSolver.Cli.csproj", "{3A221B2F-11F6-41EC-98FC-37F3C989DC04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramSolver.Contracts", "AnagramSolver.Contracts\AnagramSolver.Contracts.csproj", "{D0974D3A-2E89-4F40-9E8C-3B1D60857DE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramSolver.BusinessLogic", "AnagramSolver.BusinessLogic\AnagramSolver.BusinessLogic.csproj", "{5D3DAA4C-240E-4DD1-A062-DC320D7BACD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A221B2F-11F6-41EC-98FC-37F3C989DC04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A221B2F-11F6-41EC-98FC-37F3C989DC04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A221B2F-11F6-41EC-98FC-37F3C989DC04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A221B2F-11F6-41EC-98FC-37F3C989DC04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0974D3A-2E89-4F40-9E8C-3B1D60857DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0974D3A-2E89-4F40-9E8C-3B1D60857DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0974D3A-2E89-4F40-9E8C-3B1D60857DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0974D3A-2E89-4F40-9E8C-3B1D60857DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D3DAA4C-240E-4DD1-A062-DC320D7BACD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3DAA4C-240E-4DD1-A062-DC320D7BACD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3DAA4C-240E-4DD1-A062-DC320D7BACD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3DAA4C-240E-4DD1-A062-DC320D7BACD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
