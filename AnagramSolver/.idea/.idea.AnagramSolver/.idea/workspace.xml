@@ -5,22 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32811a50-13ee-4804-9547-e0ade2a62083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionaryController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/IAnagramSolver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/IWordRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/WordRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.Cli/AppTools.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/AppConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/Models/Anagram.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/Models/Word.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/AnagramSolver.Cli.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/AnagramSolver.Cli.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.BusinessLogic.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.BusinessLogic.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionaryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionaryController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/AnagramSolver.Contracts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/AnagramSolver.Contracts.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zodynas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/IAnagramSolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IAnagramSolver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/IWordRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IWordRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSON File" />
+      </list>
+    </option>
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -31,7 +42,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AnagramSolver.Contracts/IWordRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IWordRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -49,6 +60,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.34930778" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -80,7 +93,8 @@
       <option name="presentableId" value="Default" />
       <updated>1649093347472</updated>
       <workItem from="1649093349657" duration="9027000" />
-      <workItem from="1649141156349" duration="7109000" />
+      <workItem from="1649141156349" duration="30693000" />
+      <workItem from="1649220973990" duration="16329000" />
     </task>
     <servers />
   </component>
@@ -109,18 +123,22 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionaryController.cs</url>
-          <line>62</line>
-          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\AnagramSolver.BusinessLogic\DictionaryController.cs" initialLine="62" containingFunctionPresentation="method 'CheckForAnagram'">
+          <line>21</line>
+          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\AnagramSolver.BusinessLogic\DictionaryController.cs" initialLine="21" containingFunctionPresentation="method 'CheckForAnagram'">
             <startOffsets>
-              <option value="2008" />
+              <option value="634" />
             </startOffsets>
             <endOffsets>
-              <option value="2041" />
+              <option value="635" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

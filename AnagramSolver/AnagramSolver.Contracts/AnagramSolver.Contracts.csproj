@@ -7,8 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="Class1.cs" />
-      <Compile Remove="IWordRepository.cs" />
+      <Reference Include="System.Configuration"/>
     </ItemGroup>
 
 </Project>

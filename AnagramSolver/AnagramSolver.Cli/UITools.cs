@@ -1,43 +1,45 @@
-using AnagramSolver.BusinessLogic;
+using AnagramSolver.Contracts.Models;
 
 namespace AnagramSolver.Cli;
 
 public class UITools
 {
-    private DictionaryController _dictionaryController;
-    public UITools(DictionaryController dictionaryController)
-    {
-        _dictionaryController = dictionaryController;
-    }
-    
     public string AskQuestion(string question)
     {
-        bool isOn = true;
         string userInput = "";
-        while (isOn)
+        while (string.IsNullOrWhiteSpace(userInput) && userInput.Length < 3)
         {
             Console.WriteLine(question);
-            userInput = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(userInput))
-            {
-                Console.Clear();
-                Console.WriteLine("User input is invalid. Try again");
-            }
-            isOn = false;
+            userInput = Console.ReadLine(); // po šito veiksmo userInput string lieka be lietuviškų raidžių. Gal yra kaip tai pataisyt?
         }
         return userInput;
     }
-
-    public void ShowTheResult(string userInput, string resultString)
+    public void ShowTheResult(string userInput, List<Word> resultList)
     {
         Console.Clear();
-        Console.WriteLine($"The anagram(s) for word '{userInput}': {resultString}");
+        if (resultList.Count != 0)
+        {
+            Console.Write($"The anagram(s) for word '{userInput}': ");
+            for (int i = 0; i < resultList.Count; i++)
+            {
+                Console.Write($"{resultList[i].Content}; ");
+            }
+        }
+        else
+        {
+            AnagramWasNotFound(userInput);
+        }
+    }
+    public void FileNotFoundMesage(Exception exception)
+    {
+        Console.WriteLine($"The file could not be found or read: {exception}");
     }
 
-    public void StartProgram()
+    public void AnagramWasNotFound(string userInput)
     {
-        string userInput = AskQuestion("Enter the word to get its anagram:");
-        string result = _dictionaryController.CheckForAnagram(userInput);
-        ShowTheResult(userInput, result);
+        Console.WriteLine($"Sorry, but there is no anagram for the word '{userInput}'");
     }
+
+    
+   
 }
