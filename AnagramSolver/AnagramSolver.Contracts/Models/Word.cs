@@ -9,4 +9,9 @@ public class Word
     {
 
     }
+
+    public override int GetHashCode()
+    {
+        return string.Concat(Content.ToLower().OrderBy(c => c).ToArray()).GetHashCode();
+    }
 }

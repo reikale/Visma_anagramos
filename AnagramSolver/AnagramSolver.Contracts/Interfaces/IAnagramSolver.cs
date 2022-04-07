@@ -5,5 +5,6 @@ namespace AnagramSolver.Contracts;
 public interface IAnagramSolver
 {
     List<Word> CheckForAnagram(string userInput);
-    string CalculateWordCode(string word);
+    void DictionaryStartup();
+
 }

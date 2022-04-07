@@ -1,17 +1,17 @@
 ﻿using AnagramSolver.BusinessLogic;
 using AnagramSolver.Cli;
+using AnagramSolver.Contracts;
+
+// VARIABLES
+var appSettingsHandler = new AppSettingsHandler("appsettings.json");
+var appSettings = appSettingsHandler.GetAppSettings();
 
 // OBJECTS
-DictionaryController dictionaryController = new DictionaryController();
-WordRepo wordRepo = new WordRepo(dictionaryController);
-UITools uiTools = new UITools();
-AppTools appTools = new AppTools(uiTools, dictionaryController);
-dictionaryController.ReceiveReferences(wordRepo);
+DictionarySourceReader dictionarySourceReader = new DictionarySourceReader(appSettings);
+DictionaryActions dictionaryActions = new DictionaryActions(dictionarySourceReader);
+UITools uiTools = new UITools(appSettings);
+AppTools appTools = new AppTools(uiTools, dictionaryActions);
 
 // APP STARTS HERE
-//var start = DateTime.Now;
-appTools.LoadDictionary("../../../../zodynas.txt"); // trunka 44-52s
-//var end = DateTime.Now;
-//Console.WriteLine($"End of dictionary loading operation : {(end-start).TotalSeconds}"); 
-
-appTools.StartProgram(); // trunka 0.04s
+appTools.LoadDictionary();
+appTools.StartProgram();

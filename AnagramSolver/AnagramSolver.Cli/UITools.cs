@@ -1,16 +1,27 @@
+using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Models;
 
 namespace AnagramSolver.Cli;
 
 public class UITools
 {
+    private AppSettings _appSettings;
+    private readonly int _minInputLength;
+    private readonly int _maxNumberOfAnagrams;
+
+    public UITools(AppSettings appSettings)
+    {
+        _appSettings = appSettings;
+        _minInputLength = _appSettings.Client.MinInputLength;
+        _maxNumberOfAnagrams = _appSettings.Anagrams.MaxNumberOfReturningAnagrams;
+    }
     public string AskQuestion(string question)
     {
         string userInput = "";
-        while (string.IsNullOrWhiteSpace(userInput) && userInput.Length < 3)
+        while (string.IsNullOrWhiteSpace(userInput) && userInput.Length < _minInputLength)
         {
             Console.WriteLine(question);
-            userInput = Console.ReadLine(); // po šito veiksmo userInput string lieka be lietuviškų raidžių. Gal yra kaip tai pataisyt?
+            userInput = Console.ReadLine();
         }
         return userInput;
     }
@@ -19,27 +30,34 @@ public class UITools
         Console.Clear();
         if (resultList.Count != 0)
         {
-            Console.Write($"The anagram(s) for word '{userInput}': ");
-            for (int i = 0; i < resultList.Count; i++)
-            {
-                Console.Write($"{resultList[i].Content}; ");
-            }
+            AnagramResults(userInput, resultList);
         }
         else
         {
-            AnagramWasNotFound(userInput);
+            AnagramNotFound(userInput);
         }
     }
-    public void FileNotFoundMesage(Exception exception)
+    public void FileNotFound(Exception exception)
     {
         Console.WriteLine($"The file could not be found or read: {exception}");
     }
 
-    public void AnagramWasNotFound(string userInput)
+    public void AnagramNotFound(string userInput)
     {
         Console.WriteLine($"Sorry, but there is no anagram for the word '{userInput}'");
     }
 
-    
-   
+    public void AnagramResults(string userInput, List<Word> resultList)
+    {
+        Console.Write($"The anagram(s) for word '{userInput}': ");
+        int numberOfAnagrams = resultList.Count;
+        if (resultList.Count > _maxNumberOfAnagrams)
+        {
+            numberOfAnagrams = _maxNumberOfAnagrams;
+        }
+        for (int i = 0; i < numberOfAnagrams; i++)
+        {
+            Console.Write($"{resultList[i].Content}; ");
+        }
+    }
 }

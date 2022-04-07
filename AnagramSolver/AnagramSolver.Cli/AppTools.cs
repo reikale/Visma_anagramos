@@ -6,33 +6,29 @@ namespace AnagramSolver.Cli;
 public class AppTools
 {
     public UITools _uiTools;
-    private DictionaryController _dictionaryController;
+    private DictionaryActions _dictionaryActions;
 
-    public AppTools(UITools uiTools, DictionaryController dictionaryController)
+    public AppTools(UITools uiTools, DictionaryActions dictionaryActions)
     {
         _uiTools = uiTools;
-        _dictionaryController = dictionaryController;
+        _dictionaryActions = dictionaryActions;
     }
     public void StartProgram()
     {
         string userInput = _uiTools.AskQuestion("Enter the word to get its anagram:");
-        //var start = DateTime.Now;
-        List<Word> result = _dictionaryController.CheckForAnagram(userInput);
-       
+        List<Word> result = _dictionaryActions.CheckForAnagram(userInput);
         _uiTools.ShowTheResult(userInput, result);
-        //var end = DateTime.Now;
-        //Console.WriteLine($"\nEnd of anagram search operation: {(end-start).TotalSeconds}");
     }
 
-    public void LoadDictionary(string filePath)
+    public void LoadDictionary()
     {
         try
         {
-            _dictionaryController.DictionaryStartup(filePath);
+            _dictionaryActions.DictionaryStartup();
         }
         catch (Exception exception)
         {
-            _uiTools.FileNotFoundMesage(exception);
+            _uiTools.FileNotFound(exception);
             throw;
         }
     }
