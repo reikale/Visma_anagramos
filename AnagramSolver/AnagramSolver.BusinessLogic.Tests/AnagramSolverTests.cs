@@ -1,6 +1,7 @@
 using System.Linq;
 using AnagramSolver.Contracts;
 using NUnit.Framework;
+using Shouldly;
 
 namespace AnagramSolver.BusinessLogic.Tests;
 
@@ -29,7 +30,7 @@ public class AnagramSolverTests
         var result = resultList.Any(x => x.Content == expected);
         
         //Assert
-        Assert.That(result);
+        result.ShouldBeTrue();
     }
     
     [TestCase("pilkas", "pilvas")]
@@ -41,7 +42,7 @@ public class AnagramSolverTests
         var result = resultList.Any(x => x.Content == expected);
         
         //Assert
-        Assert.False(result);
+        result.ShouldBeFalse();
     }
     
     [TestCase("pilkas", "plikas")]
@@ -53,6 +54,6 @@ public class AnagramSolverTests
         var result = resultList.Where(x => x.Content == expected).ToList().Count;
         
         //Assert
-        Assert.That(result, Is.EqualTo(1));
+        result.ShouldBe(1);
     }
 }

@@ -1,5 +1,6 @@
 using AnagramSolver.Contracts.Models;
 using NUnit.Framework;
+using Shouldly;
 
 namespace AnagramSolver.Contracts.Tests;
 
@@ -16,7 +17,6 @@ public class WordTests
         var wordCode1 = word1.GetHashCode();
         var wordCode2 = word2.GetHashCode();
         //Assert
-        Assert.That(wordCode1, Is.EqualTo(wordCode2));
-
+        wordCode1.ShouldBe(wordCode2);
     }
 }

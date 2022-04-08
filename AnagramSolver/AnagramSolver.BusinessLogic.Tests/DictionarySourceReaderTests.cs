@@ -1,6 +1,7 @@
 using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Models;
 using NUnit.Framework;
+using Shouldly;
 
 namespace AnagramSolver.BusinessLogic.Tests;
 
@@ -23,7 +24,7 @@ public class DictionarySourceReaderTests
         //Act
         var result = _dictionarySourceReader.ReturnWordListFromSource().Count;
         //Assert
-        Assert.That(result, Is.AtLeast(1));
+        result.ShouldBeGreaterThan(1);
     }
     
     [Test]
@@ -33,7 +34,7 @@ public class DictionarySourceReaderTests
         //Act
         var result = _dictionarySourceReader.ReturnWordListFromSource()[0];
         //Assert
-        Assert.That(result, Is.InstanceOf(typeof(Word)));
+        result.ShouldBeOfType(typeof(Word));
     }
     
 }

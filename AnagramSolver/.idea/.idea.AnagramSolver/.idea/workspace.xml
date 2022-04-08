@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32811a50-13ee-4804-9547-e0ade2a62083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolverTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.BusinessLogic.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.BusinessLogic.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionaryActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionarySourceReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionarySourceReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/AnagramSolver.Cli.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/AnagramSolver.Cli.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/AppTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/AppTools.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/AnagramSolver.Contracts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/AnagramSolver.Contracts.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IAnagramSolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IAnagramSolver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolver.BusinessLogic.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolver.BusinessLogic.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolverTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolverTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts.Tests/WordTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts.Tests/WordTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +90,7 @@
       <workItem from="1649220973990" duration="27596000" />
       <workItem from="1649311283512" duration="22208000" />
       <workItem from="1649399378323" duration="6676000" />
-      <workItem from="1649409811622" duration="8978000" />
+      <workItem from="1649409811622" duration="10940000" />
     </task>
     <servers />
   </component>
