@@ -6,19 +6,15 @@ namespace AnagramSolver.Cli;
 public class UITools
 {
     private AppSettings _appSettings;
-    private readonly int _minInputLength;
-    private readonly int _maxNumberOfAnagrams;
 
     public UITools(AppSettings appSettings)
     {
         _appSettings = appSettings;
-        _minInputLength = _appSettings.Client.MinInputLength;
-        _maxNumberOfAnagrams = _appSettings.Anagrams.MaxNumberOfReturningAnagrams;
     }
     public string AskQuestion(string question)
     {
         string userInput = "";
-        while (string.IsNullOrWhiteSpace(userInput) && userInput.Length < _minInputLength)
+        while (string.IsNullOrWhiteSpace(userInput) && userInput.Length < _appSettings.Client.MinInputLength)
         {
             Console.WriteLine(question);
             userInput = Console.ReadLine();
@@ -42,18 +38,18 @@ public class UITools
         Console.WriteLine($"The file could not be found or read: {exception}");
     }
 
-    public void AnagramNotFound(string userInput)
+    private void AnagramNotFound(string userInput)
     {
         Console.WriteLine($"Sorry, but there is no anagram for the word '{userInput}'");
     }
 
-    public void AnagramResults(string userInput, List<Word> resultList)
+    private void AnagramResults(string userInput, List<Word> resultList)
     {
         Console.Write($"The anagram(s) for word '{userInput}': ");
         int numberOfAnagrams = resultList.Count;
-        if (resultList.Count > _maxNumberOfAnagrams)
+        if (resultList.Count > _appSettings.Anagrams.MaxNumberOfReturningAnagrams)
         {
-            numberOfAnagrams = _maxNumberOfAnagrams;
+            numberOfAnagrams = _appSettings.Anagrams.MaxNumberOfReturningAnagrams;
         }
         for (int i = 0; i < numberOfAnagrams; i++)
         {

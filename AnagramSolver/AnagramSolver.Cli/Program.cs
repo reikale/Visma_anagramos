@@ -8,10 +8,9 @@ var appSettings = appSettingsHandler.GetAppSettings();
 
 // OBJECTS
 DictionarySourceReader dictionarySourceReader = new DictionarySourceReader(appSettings);
-DictionaryActions dictionaryActions = new DictionaryActions(dictionarySourceReader);
+AnagramSolver.BusinessLogic.AnagramSolver anagramSolver = new AnagramSolver.BusinessLogic.AnagramSolver(dictionarySourceReader);
 UITools uiTools = new UITools(appSettings);
-AppTools appTools = new AppTools(uiTools, dictionaryActions);
+AppTools appTools = new AppTools(uiTools, anagramSolver);
 
 // APP STARTS HERE
-appTools.LoadDictionary();
 appTools.StartProgram();
