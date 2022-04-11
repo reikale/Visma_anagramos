@@ -9,32 +9,23 @@ namespace AnagramSolver.BusinessLogic.Tests;
 public class DictionarySourceReaderTests
 {
     private DictionarySourceReader _dictionarySourceReader;
+
     [SetUp]
     public void Init()
     {
         var appSettingsHandler = new AppSettingsHandler("appsettings.json");
         var appSettings = appSettingsHandler.GetAppSettings();
+        appSettings.WordsRepoSource.PathToWordsRepo = "../../../../testZodynas.txt";
         _dictionarySourceReader = new DictionarySourceReader(appSettings);
     }
     
     [Test]
-    public void ReturnWordListFromSource_ShouldWork_LengthIsMoreThan()
+    public void ReturnWordListFromSource_ShouldWork_LengthIs()
     {
-        //Arrange
         //Act
         var result = _dictionarySourceReader.ReturnWordListFromSource().Count;
         //Assert
-        result.ShouldBeGreaterThan(1);
+        result.ShouldBe(10);
     }
-    
-    [Test]
-    public void ReturnWordListFromSource_ShouldWork_ObjectIsOfType()
-    {
-        //Arrange
-        //Act
-        var result = _dictionarySourceReader.ReturnWordListFromSource()[0];
-        //Assert
-        result.ShouldBeOfType(typeof(Word));
-    }
-    
+
 }

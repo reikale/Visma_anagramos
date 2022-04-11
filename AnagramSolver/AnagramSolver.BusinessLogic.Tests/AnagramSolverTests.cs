@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using System.Linq;
 using AnagramSolver.Contracts;
+using AnagramSolver.Contracts.Models;
+using Moq;
 using NUnit.Framework;
 using Shouldly;
 
@@ -8,29 +11,38 @@ namespace AnagramSolver.BusinessLogic.Tests;
 [TestFixture]
 public class AnagramSolverTests
 {
-    private AnagramSolver _anagramSolver;
-    private IWordRepository _dictionarySourceReader;
-    
+    private Mock<IWordRepository> _mockRepository;
+    private AnagramSolver _anotherAnagramSolver;
+
     [SetUp]
     public void Init()
     {
-        var appSettingsHandler = new AppSettingsHandler("appsettings.json");
-        var appSettings = appSettingsHandler.GetAppSettings();
-        _dictionarySourceReader = new DictionarySourceReader(appSettings);
-        _anagramSolver = new AnagramSolver(_dictionarySourceReader);
+        _mockRepository = new Mock<IWordRepository>();
+        _mockRepository.Setup(repo => repo.ReturnWordListFromSource()).Returns(new List<Word>
+        {
+            new Word {Content = "pilkas", Type = ""},
+            new Word {Content = "plikas", Type = ""},
+            new Word {Content = "paliks", Type = ""},
+            new Word {Content = "paltas", Type = ""},
+
+        });
+        _anotherAnagramSolver = new AnagramSolver(_mockRepository.Object);
     }
     
-    [TestCase("pilkas", "plikas")]
-    [TestCase("veidas", "dievas")]
-    [TestCase("adeisv", "dievas")]
-    public void CheckForAnagram_ShouldWork_AnagramFound(string input, string expected)
+    [Test]
+    public void CheckForAnagram_ShouldWork_AnagramFound()
     {
+        //Arrange
+        string input = "ailksp";
         //Act
-        var resultList = _anagramSolver.CheckForAnagram(input);
-        var result = resultList.Any(x => x.Content == expected);
+        var resultList = _anotherAnagramSolver.CheckForAnagram(input);
         
         //Assert
-        result.ShouldBeTrue();
+        resultList.Any(x => x.Content == "pilkas").ShouldBeTrue();
+        resultList.Any(x => x.Content == "plikas").ShouldBeTrue();
+        resultList.Any(x => x.Content == "ailksp").ShouldBeFalse();
+        resultList.Count().ShouldBe(3);
+
     }
     
     [TestCase("pilkas", "pilvas")]
@@ -38,22 +50,24 @@ public class AnagramSolverTests
     public void CheckForAnagram_ShouldFail_AnagramNotFound(string input, string expected)
     {
         //Act
-        var resultList = _anagramSolver.CheckForAnagram(input);
+        var resultList = _anotherAnagramSolver.CheckForAnagram(input);
         var result = resultList.Any(x => x.Content == expected);
         
         //Assert
         result.ShouldBeFalse();
     }
     
-    [TestCase("pilkas", "plikas")]
-    [TestCase("veidas", "dievas")]
-    public void CheckForAnagram_ShouldWork_NoDublicates(string input, string expected)
+    [Test]
+    public void CheckForAnagram_ShouldWork_NoDublicates()
     {
+        //Arrange
+        string input = "pilkas";
         //Act
-        var resultList = _anagramSolver.CheckForAnagram(input);
-        var result = resultList.Where(x => x.Content == expected).ToList().Count;
-        
+        var resultList = _anotherAnagramSolver.CheckForAnagram(input);
+
         //Assert
-        result.ShouldBe(1);
+        resultList.Where(x => x.Content == "pilkas").ToList().Count.ShouldBe(1);
+        resultList.Where(x => x.Content == "paliks").ToList().Count.ShouldBe(1);
+        resultList.Where(x => x.Content == "palis").ToList().Count.ShouldBe(0);
     }
 }

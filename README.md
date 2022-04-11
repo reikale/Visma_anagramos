@@ -23,6 +23,7 @@
 
 - NUnit - version 3.13.2
 - Shouldly - version 4.0.3
+- Moq - version 4.17.2
 
 ## Setup
 

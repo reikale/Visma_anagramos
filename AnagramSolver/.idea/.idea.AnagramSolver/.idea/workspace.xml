@@ -9,7 +9,10 @@
       <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolver.BusinessLogic.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolver.BusinessLogic.Tests.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolverTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/AnagramSolverTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts.Tests/WordTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts.Tests/WordTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.BusinessLogic.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.BusinessLogic.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/AnagramSolver.Cli.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/AnagramSolver.Cli.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts.Tests/AnagramSolver.Contracts.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts.Tests/AnagramSolver.Contracts.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/AnagramSolver.Contracts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/AnagramSolver.Contracts.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,9 +36,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IWordRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f3b9684f72bc2cc435eb694f7cc86eca8c240d2d1cefa1e8697a61f1f2f27f/SafeFileHandle.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a52b594732f8426d3f1d4a85aaebb561a8a1834abe49eea9e1821e6bb682e/SimpleWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bef935dbb8608c28a19b77b647713b45d6233995c443988e8154ae9ef3ddd3c/ContextUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1da7b6c7c71a954fe3eb2531c6476711b3e6d93a8d76795386d326bb9dbc/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d056b4e3b34cd15e21dec611d5b5bbaf85e1f15b445f4e6b3e4dc6634d649042/WorkItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IWordRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4addefb1e79fbe7def610dadfd98060a787c2216743868459b9995d81a829/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df6051f28c6c3f2ca0ddb6b26543d79632e5fa7a43a54a54eba91d4478568c0/SimpleWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f3b9684f72bc2cc435eb694f7cc86eca8c240d2d1cefa1e8697a61f1f2f27f/SafeFileHandle.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f52b9d49264ef126bd48babdd8cc869dc58a767b364e767a9a1590a4916fd3/MethodWrapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/af61fe451b1754fe157dfca43a7fe5f2d94cebde48c29960b1bdbd66084c6/CompositeWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/685ce156d8e99635e2730eb8820b287ae745d9e8a9b48edfb6941387e3eca/TestMethodCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9b481fc8f61495566a71bc5727f43a5e726fb276470099219041c8c95313c8/BeforeAndAfterTestCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -53,7 +66,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.34930778" />
     <property name="settings.editor.selected.configurable" value="RiderUnitTestingPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -90,7 +102,8 @@
       <workItem from="1649220973990" duration="27596000" />
       <workItem from="1649311283512" duration="22208000" />
       <workItem from="1649399378323" duration="6676000" />
-      <workItem from="1649409811622" duration="10940000" />
+      <workItem from="1649409811622" duration="12702000" />
+      <workItem from="1649660403648" duration="5463000" />
     </task>
     <servers />
   </component>
