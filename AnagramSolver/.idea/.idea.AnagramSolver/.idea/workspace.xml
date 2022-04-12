@@ -7,36 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32811a50-13ee-4804-9547-e0ade2a62083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Controllers/StartController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/PaginatedList.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp.Tests/HomeControllerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionarySourceReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionarySourceReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IAnagramSolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IAnagramSolver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AnagramSolver.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/StartController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +44,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4addefb1e79fbe7def610dadfd98060a787c2216743868459b9995d81a829/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f3b9684f72bc2cc435eb694f7cc86eca8c240d2d1cefa1e8697a61f1f2f27f/SafeFileHandle.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f52b9d49264ef126bd48babdd8cc869dc58a767b364e767a9a1590a4916fd3/MethodWrapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d4e777788da51e4e9c116a47938d28b70e192e3a9d2c6087fdaee9a4295eb/StringShouldBeTestExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/685ce156d8e99635e2730eb8820b287ae745d9e8a9b48edfb6941387e3eca/TestMethodCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/89aa24538c3ae4d61273c8cf6d4621d4d55bde55b9f76a9e4735339a4c82d1e6/ShouldlyCoreExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9b481fc8f61495566a71bc5727f43a5e726fb276470099219041c8c95313c8/BeforeAndAfterTestCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -190,7 +169,7 @@
       <workItem from="1649660403648" duration="33870000" />
       <workItem from="1649701010214" duration="1010000" />
       <workItem from="1649746759145" duration="283000" />
-      <workItem from="1649747070582" duration="10059000" />
+      <workItem from="1649747070582" duration="23337000" />
     </task>
     <servers />
   </component>
@@ -213,6 +192,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApp.Tests/HomeControllerTests.cs</url>
+          <line>51</line>
+          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\WebApp.Tests\HomeControllerTests.cs" initialLine="49" containingFunctionPresentation="method 'Index_ShouldWork_ReturnsIndexView'">
+            <startOffsets>
+              <option value="1713" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1751" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -18,6 +18,8 @@
 > *  Object oriented programming (OOP),
 > *  Unit testing (using nUnit framework)
 > *  ASP.NET MVC
+> *  Dependency injection
+> *  Routing
 > *  and more...
 
 ## Technologies Used

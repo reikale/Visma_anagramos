@@ -1,10 +1,7 @@
-using AnagramSolver.BusinessLogic;
-using AnagramSolver.Cli;
+using System.Diagnostics.CodeAnalysis;
 using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 
 namespace WebApp.Controllers;
 
@@ -20,20 +17,21 @@ public class HomeController : Controller
     
     // GET
     [Route("/{word}")]
+    [SuppressMessage("ReSharper.DPA", "DPA0001: Memory allocation issues")]
     public IActionResult Index(string word)
     {
         ViewData["UserWord"] = word;
         ViewData["ResultList"] = _anagramSolver.CheckForAnagram(word);
-        return View();
+        return View("Index");
     }
     [Route("/")]
     public IActionResult Empty()
     {
-        return View();
+        return View("Empty");
     }
     [Route("/ViewAll")]
     public async Task<IActionResult> ViewAll(int? pageNumber)
-    {
+    { 
         var words= _anagramSolver.GetAllSourceWords();
         ViewData["ResultList"] = _anagramSolver.GetAllSourceWords();
         if (pageNumber == null) pageNumber = 1;

@@ -35,7 +35,7 @@
                     <td>@((Model.PageIndex-1)*100+i+1)</td>
                     <td>@Model[i].Content</td>
                     <td>@Model[i].Type</td>
-                    <td>@Html.ActionLink("View Anagram", "Index", "Home", new {word = Model[i].Content}, new{@class="btn btn-link"})</td>
+                    <td>@Html.ActionLink("View Anagram", "Index", "Home", new {word = Model[i].Content}, new{@class="btn btn-link", @target="_blank"})</td>
     
                 </tr>
             }
