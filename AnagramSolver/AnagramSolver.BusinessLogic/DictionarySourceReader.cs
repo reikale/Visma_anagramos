@@ -8,9 +8,9 @@ public class DictionarySourceReader : IWordRepository
     private const int _WORD_CONTENT = 2;
     private const int _WORD_TYPE = 1;
 
-    public DictionarySourceReader(AppSettings appSettings)
+    public DictionarySourceReader()
     {
-        _appSettings = appSettings;
+        _appSettings = new AppSettingsHandler("appsettings.json").GetAppSettings();
     }
 
     public List<Word> ReturnWordListFromSource()

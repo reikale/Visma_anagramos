@@ -17,6 +17,7 @@
 > *  Data structures,
 > *  Object oriented programming (OOP),
 > *  Unit testing (using nUnit framework)
+> *  ASP.NET MVC
 > *  and more...
 
 ## Technologies Used
@@ -24,6 +25,7 @@
 - NUnit - version 3.13.2
 - Shouldly - version 4.0.3
 - Moq - version 4.17.2
+- Microsoft Entity Framework - version 7.0.0
 
 ## Setup
 

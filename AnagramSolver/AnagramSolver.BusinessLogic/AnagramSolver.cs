@@ -1,5 +1,6 @@
 ﻿using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Models;
+using NUnit.Framework.Internal.Execution;
 
 namespace AnagramSolver.BusinessLogic;
 
@@ -26,5 +27,10 @@ public class AnagramSolver : IAnagramSolver
         var allWordObjects = _dictionarySourceReader.ReturnWordListFromSource();
         HashSet<Word> wordDictionary = new HashSet<Word>(allWordObjects);
         return wordDictionary;
+    }
+
+    public List<Word> GetAllSourceWords()
+    {
+        return ReturnWordDictionary().ToList();
     }
 }

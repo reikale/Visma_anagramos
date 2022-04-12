@@ -16,7 +16,7 @@ public class DictionarySourceReaderTests
         var appSettingsHandler = new AppSettingsHandler("appsettings.json");
         var appSettings = appSettingsHandler.GetAppSettings();
         appSettings.WordsRepoSource.PathToWordsRepo = "../../../../testZodynas.txt";
-        _dictionarySourceReader = new DictionarySourceReader(appSettings);
+        _dictionarySourceReader = new DictionarySourceReader();
     }
     
     [Test]

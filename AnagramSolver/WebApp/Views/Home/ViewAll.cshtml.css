@@ -1,0 +1,7 @@
+.anagram-results{
+    padding-top: 50px;
+    width: max-content;
+}
+.pagination{
+    justify-content: space-between;
+}
