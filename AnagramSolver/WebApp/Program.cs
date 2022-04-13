@@ -1,11 +1,12 @@
-using System.Data;
 using AnagramSolver.Contracts;
-using DiffEngine;
-using Microsoft.AspNetCore.Mvc;
+using AnagramSolver.Contracts.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var appsettingsConfig = builder.Configuration.GetSection("App");
+builder.Services.Configure<AppSettings>(appsettingsConfig);
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IWordRepository, AnagramSolver.BusinessLogic.DictionarySourceReader>();
 builder.Services.AddTransient<IAnagramSolver, AnagramSolver.BusinessLogic.AnagramSolver>();
@@ -27,11 +28,13 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-//app.MapGet("/", () => "");
-//app.MapGet("/Home/Index.cshtml", () => "Home");
+
 app.MapControllerRoute(
    name: "default",
-   pattern: "{controller=Home}/{action=Index}/{id?}");
+   pattern: "{controller=Home}/{action=Empty}");
+app.MapControllerRoute(
+    name: "index",
+    pattern: "{controller=Home}/{action=Index}/{word}");
 
 app.MapRazorPages();
 

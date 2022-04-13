@@ -1,19 +1,11 @@
 @using AnagramSolver.Contracts.Models
+@model WebApp.ViewModels.AnagramResponseViewModel
 
 @{
     ViewData["Title"] = "Anagrams";
     Layout = "~/Pages/Shared/_Layout.cshtml";
-    var resultList = ViewData["ResultList"] as List<Word>;
-    
+
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>@ViewData["Title"]</title>
-</head>
-<body>
 
 <div class="content">
     <div>
@@ -22,7 +14,7 @@
         </h3>
     </div>
     <div class="anagram-results">
-        <h4>Anagrams of "@ViewData["UserWord"]":</h4>
+        <h4>Anagrams of "@Model.UserWord":</h4>
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -31,17 +23,15 @@
                     <th scope="col">Type</th>
                 </tr>
                 </thead>
-                @for (int i = 0; i < resultList.Count; i++)
+                @for (int i = 0; i < @Model.Anagrams.Count; i++)
                 {
                     <tr>
                         <th scope="row">@(i+1)</th>
-                        <td>@resultList[i].Content</td>
-                        <td>@resultList[i].Type</td>
+                        <td>@Model.Anagrams[i].Content</td>
+                        <td>@Model.Anagrams[i].Type</td>
                     </tr>
                 }
             </table>
     </div>
 
 </div>
-</body>
-</html>

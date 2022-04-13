@@ -7,14 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32811a50-13ee-4804-9547-e0ade2a62083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebApp.Tests/HomeControllerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/AnagramResponseViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic.Tests/DictionarySourceReaderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp.Tests/HomeControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp.Tests/HomeControllerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/StartController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/PaginatedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/PaginatedList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +170,10 @@
       <workItem from="1649660403648" duration="33870000" />
       <workItem from="1649701010214" duration="1010000" />
       <workItem from="1649746759145" duration="283000" />
-      <workItem from="1649747070582" duration="23337000" />
+      <workItem from="1649747070582" duration="23510000" />
+      <workItem from="1649787419184" duration="965000" />
+      <workItem from="1649832944642" duration="7815000" />
+      <workItem from="1649845095250" duration="1938000" />
     </task>
     <servers />
   </component>
@@ -192,25 +196,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebApp.Tests/HomeControllerTests.cs</url>
-          <line>51</line>
-          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\WebApp.Tests\HomeControllerTests.cs" initialLine="49" containingFunctionPresentation="method 'Index_ShouldWork_ReturnsIndexView'">
-            <startOffsets>
-              <option value="1713" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1751" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

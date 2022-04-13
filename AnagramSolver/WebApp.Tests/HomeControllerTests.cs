@@ -50,7 +50,6 @@ public class HomeControllerTests
         var result = _controller.Index("zodis");
         var viewResult = result.ShouldBeOfType<ViewResult>();
         viewResult.ViewName.ShouldBe("Index");
-        // šitoj vietoj nesuprantu kodėl testas rašo kad yra "aborted", nors pagal rezultatą gaunasi pavykęs.
     }
 
     [Test]
