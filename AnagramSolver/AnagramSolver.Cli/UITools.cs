@@ -21,7 +21,7 @@ public class UITools
         }
         return userInput;
     }
-    public void ShowTheResult(string userInput, List<Word> resultList)
+    public void ShowTheResult(string userInput, List<Word>? resultList)
     {
         Console.Clear();
         if (resultList.Count != 0)
@@ -43,7 +43,7 @@ public class UITools
         Console.WriteLine($"Sorry, but there is no anagram for the word '{userInput}'");
     }
 
-    private void AnagramResults(string userInput, List<Word> resultList)
+    private void AnagramResults(string userInput, List<Word>? resultList)
     {
         Console.Write($"The anagram(s) for word '{userInput}': ");
         int numberOfAnagrams = resultList.Count;

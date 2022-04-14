@@ -7,15 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32811a50-13ee-4804-9547-e0ade2a62083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/AnagramResponseViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp.Tests/HomeControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp.Tests/HomeControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/PaginatedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/PaginatedList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/AppTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/AppTools.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Pages/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Home/ViewAll.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,9 +89,9 @@
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebApp">
     <configuration name="AnagramSolver.Cli" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/AnagramSolver.Cli/bin/Debug/net6.0/AnagramSolver.Cli.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AnagramSolver.Cli/bin/Debug/net6.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -102,7 +101,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net6.0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -152,6 +151,11 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.WebApp" />
+      <item itemvalue=".NET Launch Settings Profile.WebApp: IIS Express" />
+      <item itemvalue=".NET Project.AnagramSolver.Cli" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -173,7 +177,8 @@
       <workItem from="1649747070582" duration="23510000" />
       <workItem from="1649787419184" duration="965000" />
       <workItem from="1649832944642" duration="7815000" />
-      <workItem from="1649845095250" duration="1938000" />
+      <workItem from="1649845095250" duration="8242000" />
+      <workItem from="1649918799885" duration="5032000" />
     </task>
     <servers />
   </component>
@@ -196,6 +201,38 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionarySourceReader.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\AnagramSolver.BusinessLogic\DictionarySourceReader.cs" initialLine="17" containingFunctionPresentation="method 'ReturnWordListFromSource'">
+            <startOffsets>
+              <option value="488" />
+            </startOffsets>
+            <endOffsets>
+              <option value="518" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionarySourceReader.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\AnagramSolver.BusinessLogic\DictionarySourceReader.cs" initialLine="31" containingFunctionPresentation="method 'ReadDataFromFile'">
+            <startOffsets>
+              <option value="1014" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1082" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

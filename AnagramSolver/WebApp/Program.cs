@@ -1,3 +1,4 @@
+using System.Configuration;
 using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Models;
 
@@ -7,10 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var appsettingsConfig = builder.Configuration.GetSection("App");
 builder.Services.Configure<AppSettings>(appsettingsConfig);
+builder.Services.AddMvc();
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IWordRepository, AnagramSolver.BusinessLogic.DictionarySourceReader>();
 builder.Services.AddTransient<IAnagramSolver, AnagramSolver.BusinessLogic.AnagramSolver>();
-
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -21,6 +23,10 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true));
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

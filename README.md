@@ -20,6 +20,7 @@
 > *  ASP.NET MVC
 > *  Dependency injection
 > *  Routing
+> *  WEB API
 > *  and more...
 
 ## Technologies Used

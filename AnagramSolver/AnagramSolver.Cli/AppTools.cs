@@ -1,3 +1,5 @@
+using System.Net.Http.Json;
+using System.Text.Json;
 using AnagramSolver.BusinessLogic;
 using AnagramSolver.Contracts.Models;
 
@@ -13,13 +15,28 @@ public class AppTools
         _uiTools = uiTools;
         _anagramSolver = anagramSolver;
     }
-    public void StartProgram()
+    public async void StartProgram()
     {
         string userInput = _uiTools.AskQuestion("Enter the word to get its anagram:");
-        List<Word> result;
+        List<Word> result = new List<Word>();
         try
         {
-            result = _anagramSolver.CheckForAnagram(userInput);
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://localhost:7009/api/anagram/");
+                //HTTP GET
+                var clientRresponse = client.GetAsync(userInput);
+                clientRresponse.Wait();
+                var clientResult = clientRresponse.Result;
+                if (clientResult.IsSuccessStatusCode)
+                {
+                    var readTask = clientResult.Content.ReadFromJsonAsync<List<Word>>();
+                    readTask.Wait();
+                    result = readTask.Result;
+                }
+            }
+            //Older version:
+            //result = _anagramSolver.CheckForAnagram(userInput);
         }
         catch (Exception e)
         {
