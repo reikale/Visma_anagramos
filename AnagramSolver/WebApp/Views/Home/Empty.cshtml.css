@@ -1,0 +1,15 @@
+.form-block {
+    height: 50vh;
+    display: flex;
+    align-content: center;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+div.form-group.form-table {
+    width: 60vw !important;
+}
+button{
+    margin-top: 20px;
+    color: #fff;
+}

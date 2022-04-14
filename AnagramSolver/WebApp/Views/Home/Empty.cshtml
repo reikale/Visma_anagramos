@@ -1,11 +1,18 @@
-@page
-@model WebApp.Pages.Home.Empty
+
+@model WebApp.WordForm;
 
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<div>
-    
+<div class="form-block">
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <div class="form-group form-table">
+            @Html.LabelFor(x => x.Word, "Enter the word to get its anagram", new{@class="form-label label-field", style="font-size:2em"})
+            @Html.TextBoxFor(x => x.Word, new{@class="form-control input-field", placeholder="e.g. druska", style="font-size:1.4em"})
+        </div>
+        <button type="submit" class="btn btn-warning">Search</button>
+    }
 </div>
 

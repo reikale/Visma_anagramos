@@ -7,14 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32811a50-13ee-4804-9547-e0ade2a62083" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WebApp/Models/WordForm.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/AppTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/AppTools.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.Cli/UITools.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Pages/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/WebApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/PaginatedList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Models/PaginatedList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Home/Empty.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3f13d6e72b98d8df689bdf6f96e785c26253f95a5e49ee8a54587b412f0ec/HttpHeaders.Generated.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ecd37839cf234019749482ed6ffa34c835430d549605fffeb2ff132a1e/TagHelperExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e8d3bcb75657e1215392dfd276529f3c965e923e468ed653f863cdffe755472/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/598be7b76329747735b1e8e8b423ca7a2fff54b0a9474b23f1e0f920a889444d/RazorView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4addefb1e79fbe7def610dadfd98060a787c2216743868459b9995d81a829/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
@@ -53,17 +52,23 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a52b594732f8426d3f1d4a85aaebb561a8a1834abe49eea9e1821e6bb682e/SimpleWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bef935dbb8608c28a19b77b647713b45d6233995c443988e8154ae9ef3ddd3c/ContextUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9d4f4ac7db6d2c5d183ab2d92602280ed4349fd6e6a1b6313546b3d01fdab5/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d4c127b7bdff9d3920b7638c2683ce71bccc9c6f640d9257bf8aecf60a6aa44/DiagnosticListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1da7b6c7c71a954fe3eb2531c6476711b3e6d93a8d76795386d326bb9dbc/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a2caab9c9a969ecb7451e249cc4371f2ed1ea38176d5543907f61fe9b31d5e/ViewExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d056b4e3b34cd15e21dec611d5b5bbaf85e1f15b445f4e6b3e4dc6634d649042/WorkItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8b17eea7411eb1ee7e80413e8229dc445ba073ab591c18196db8b55712aabb/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IWordRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/39882c59da88a786946a40bf675cd7facf94e555372b58ae237ea5fc5d9972e/Stopwatch.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df6051f28c6c3f2ca0ddb6b26543d79632e5fa7a43a54a54eba91d4478568c0/SimpleWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c9ca552eea9bb8fababbf1cd3f981cf68849ccc365dcca5627376f98e505c74/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b0ab5c18115e4f7e08f51aa933b3b276ceffeb411e459eeb6bc39371a704c11/ValueStopwatch.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/af61fe451b1754fe157dfca43a7fe5f2d94cebde48c29960b1bdbd66084c6/CompositeWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/faf4a4b37056302738a46865827c3d2d3b6b1b977603a3932b0cd749921118/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/25f5e3f270815f761c1f8d27a623df5985f2c6277738d2ec6a7fb08b90bb/ServiceProviderEngineScope.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9ec9132df6c0984e9d24947ea20b4e217f4d5d358cdd93ed33f42db5fce12f/ViewResultExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e8feaadf5c3fa14d36ea2a638c432a2e1a47b7837d8b83d88303c5d9c15cf/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/685375de32fa2adf315b38f6d22782547cd9795e6d4d109e94522c8b6cc446c0/DeveloperExceptionPageMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d9a41d47547e1fe7fe548b21ab4de12cc2671170a023bc8c629017837eb5f4/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f5297661c332adde375e682e974228832372ef64d6fd9c55e716bce7f72c655/ResourceInvoker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -178,7 +183,7 @@
       <workItem from="1649787419184" duration="965000" />
       <workItem from="1649832944642" duration="7815000" />
       <workItem from="1649845095250" duration="8242000" />
-      <workItem from="1649918799885" duration="5032000" />
+      <workItem from="1649918799885" duration="8211000" />
     </task>
     <servers />
   </component>
@@ -206,30 +211,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionarySourceReader.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\AnagramSolver.BusinessLogic\DictionarySourceReader.cs" initialLine="17" containingFunctionPresentation="method 'ReturnWordListFromSource'">
+          <url>file://$PROJECT_DIR$/WebApp/Controllers/HomeController.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\WebApp\Controllers\HomeController.cs" initialLine="22" containingFunctionPresentation="method 'Index'">
             <startOffsets>
-              <option value="488" />
+              <option value="562" />
             </startOffsets>
             <endOffsets>
-              <option value="518" />
+              <option value="563" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/AnagramSolver.BusinessLogic/DictionarySourceReader.cs</url>
-          <line>31</line>
-          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\AnagramSolver.BusinessLogic\DictionarySourceReader.cs" initialLine="31" containingFunctionPresentation="method 'ReadDataFromFile'">
-            <startOffsets>
-              <option value="1014" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1082" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
