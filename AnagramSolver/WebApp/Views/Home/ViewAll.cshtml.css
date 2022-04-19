@@ -5,3 +5,9 @@
 .pagination{
     justify-content: space-between;
 }
+.search{
+    display: flex;
+}
+.form-table{
+    display: flex;
+}

@@ -16,18 +16,18 @@ public class DictionarySourceReaderTests
     public void Init()
     {
         _dictionarySourceReader = new Mock<IWordRepository>();
-        _dictionarySourceReader.Setup(x => x.ReturnWordListFromSource()).Returns(new List<Word>
+        _dictionarySourceReader.Setup(x => x.ReturnWordListFromSource()).Returns(new List<WordModel>
         {
-            new Word{Content = "pilka", Type=""},
-            new Word{Content = "pilkais", Type=""},
-            new Word{Content = "pilkas", Type=""},
-            new Word{Content = "pilki", Type=""},
-            new Word{Content = "pilko", Type=""},
-            new Word{Content = "pilkos", Type=""},
-            new Word{Content = "pilku", Type=""},
-            new Word{Content = "plika", Type=""},
-            new Word{Content = "plikas", Type=""},
-            new Word{Content = "paliks", Type=""},
+            new WordModel{Word = "pilka", Category= ""},
+            new WordModel{Word = "pilkais", Category=""},
+            new WordModel{Word = "pilkas", Category=""},
+            new WordModel{Word = "pilki", Category=""},
+            new WordModel{Word = "pilko", Category=""},
+            new WordModel{Word = "pilkos", Category=""},
+            new WordModel{Word = "pilku", Category=""},
+            new WordModel{Word = "plika", Category=""},
+            new WordModel{Word = "plikas", Category=""},
+            new WordModel{Word = "paliks", Category=""},
         
         });
     }

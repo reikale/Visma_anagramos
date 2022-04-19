@@ -1,7 +1,12 @@
+using System.Data;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using AnagramSolver.Contracts;
+using AnagramSolver.Contracts.Data;
 using AnagramSolver.Contracts.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using WebApp.ViewModels;
 
 namespace WebApp.Controllers;
@@ -9,11 +14,12 @@ namespace WebApp.Controllers;
 public class HomeController : Controller
 {
     private IAnagramSolver _anagramSolver;
-    
-    public HomeController(IAnagramSolver anagramSolver)
-    {
+    private DataContext _context;
 
+    public HomeController(IAnagramSolver anagramSolver, DataContext context)
+    {
         _anagramSolver = anagramSolver;
+        _context = context;
     }
     
     // GET
@@ -37,7 +43,13 @@ public class HomeController : Controller
         if (pageNumber == null) pageNumber = 1;
 
         int pageSize = 100;
-        return View(await PaginatedList<Word>.CreateAsync(words, pageNumber ?? 1, pageSize));
-       
+        return View(await PaginatedList<WordModel>.CreateAsync(words, pageNumber ?? 1, pageSize));
+    }
+    public async Task<IActionResult> Search(string? word)
+    {
+        var words = _context.Words.FromSqlRaw("SELECT * FROM dbo.Words WHERE Word LIKE '%'+@UserInput+'%'", new SqlParameter("@UserInput", word)).ToList();
+
+        //return foundWords;
+        return View("Search", new WordSearchModel{Words = words}); 
     }
 }

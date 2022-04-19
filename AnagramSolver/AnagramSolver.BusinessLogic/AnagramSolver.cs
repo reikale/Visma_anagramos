@@ -1,35 +1,34 @@
 ﻿using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Models;
-using NUnit.Framework.Internal.Execution;
 
 namespace AnagramSolver.BusinessLogic;
 
 public class AnagramSolver : IAnagramSolver
 {
-    private IWordRepository _dictionarySourceReader;
+    private IWordRepository _wordRepository;
 
-    public AnagramSolver(IWordRepository dictionarySourceReader)
+    public AnagramSolver(IWordRepository wordDatabaseReader)
     {
-        _dictionarySourceReader = dictionarySourceReader;
+        _wordRepository = wordDatabaseReader;
     }
 
-    public List<Word> CheckForAnagram(string userInput)
+    public List<WordModel> CheckForAnagram(string userInput)
     {
-        var wrappedWord = new Word{Content = userInput};
+        var wrappedWord = new WordModel{Word = userInput};
         var userWordCode = wrappedWord.GetHashCode();
         var sourceWords = ReturnWordDictionary();
         var listOfAnagrams = sourceWords.Where(x=>x.GetHashCode() == userWordCode).ToList();
         return listOfAnagrams;
     }
-    
-    private HashSet<Word> ReturnWordDictionary()
+
+    private HashSet<WordModel> ReturnWordDictionary()
     {
-        var allWordObjects = _dictionarySourceReader.ReturnWordListFromSource();
-        HashSet<Word> wordDictionary = new HashSet<Word>(allWordObjects);
+        var allWordObjects = _wordRepository.ReturnWordListFromSource();
+        HashSet<WordModel> wordDictionary = new HashSet<WordModel>(allWordObjects);
         return wordDictionary;
     }
 
-    public List<Word> GetAllSourceWords()
+    public List<WordModel> GetAllSourceWords()
     {
         return ReturnWordDictionary().ToList();
     }

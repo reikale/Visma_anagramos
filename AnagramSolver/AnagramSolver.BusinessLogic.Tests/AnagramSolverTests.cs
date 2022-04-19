@@ -18,12 +18,12 @@ public class AnagramSolverTests
     public void Init()
     {
         _mockRepository = new Mock<IWordRepository>();
-        _mockRepository.Setup(repo => repo.ReturnWordListFromSource()).Returns(new List<Word>
+        _mockRepository.Setup(repo => repo.ReturnWordListFromSource()).Returns(new List<WordModel>
         {
-            new Word {Content = "pilkas", Type = ""},
-            new Word {Content = "plikas", Type = ""},
-            new Word {Content = "paliks", Type = ""},
-            new Word {Content = "paltas", Type = ""},
+            new WordModel {Word = "pilkas", Category = ""},
+            new WordModel {Word = "plikas", Category = ""},
+            new WordModel {Word = "paliks", Category = ""},
+            new WordModel {Word = "paltas", Category = ""},
 
         });
         _anotherAnagramSolver = new AnagramSolver(_mockRepository.Object);
@@ -38,9 +38,9 @@ public class AnagramSolverTests
         var resultList = _anotherAnagramSolver.CheckForAnagram(input);
         
         //Assert
-        resultList.Any(x => x.Content == "pilkas").ShouldBeTrue();
-        resultList.Any(x => x.Content == "plikas").ShouldBeTrue();
-        resultList.Any(x => x.Content == "ailksp").ShouldBeFalse();
+        resultList.Any(x => x.Word == "pilkas").ShouldBeTrue();
+        resultList.Any(x => x.Word == "plikas").ShouldBeTrue();
+        resultList.Any(x => x.Word == "ailksp").ShouldBeFalse();
         resultList.Count().ShouldBe(3);
 
     }
@@ -51,7 +51,7 @@ public class AnagramSolverTests
     {
         //Act
         var resultList = _anotherAnagramSolver.CheckForAnagram(input);
-        var result = resultList.Any(x => x.Content == expected);
+        var result = resultList.Any(x => x.Word == expected);
         
         //Assert
         result.ShouldBeFalse();
@@ -66,8 +66,8 @@ public class AnagramSolverTests
         var resultList = _anotherAnagramSolver.CheckForAnagram(input);
 
         //Assert
-        resultList.Where(x => x.Content == "pilkas").ToList().Count.ShouldBe(1);
-        resultList.Where(x => x.Content == "paliks").ToList().Count.ShouldBe(1);
-        resultList.Where(x => x.Content == "palis").ToList().Count.ShouldBe(0);
+        resultList.Where(x => x.Word == "pilkas").ToList().Count.ShouldBe(1);
+        resultList.Where(x => x.Word == "paliks").ToList().Count.ShouldBe(1);
+        resultList.Where(x => x.Word == "palis").ToList().Count.ShouldBe(0);
     }
 }

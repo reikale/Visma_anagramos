@@ -18,7 +18,7 @@ public class AppTools
     public async void StartProgram()
     {
         string userInput = _uiTools.AskQuestion("Enter the word to get its anagram:");
-        List<Word> result = new List<Word>();
+        List<WordModel> result = new List<WordModel>();
         try
         {
             using (var client = new HttpClient())
@@ -30,7 +30,7 @@ public class AppTools
                 var clientResult = clientRresponse.Result;
                 if (clientResult.IsSuccessStatusCode)
                 {
-                    var readTask = clientResult.Content.ReadFromJsonAsync<List<Word>>();
+                    var readTask = clientResult.Content.ReadFromJsonAsync<List<WordModel>>();
                     readTask.Wait();
                     result = readTask.Result;
                 }

@@ -1,6 +1,6 @@
 
 @using AnagramSolver.Contracts.Models
-@model WebApp.PaginatedList<Word>
+@model WebApp.PaginatedList<WordModel>
 
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
@@ -14,7 +14,17 @@
 </head>
 <body>
 <div class="content">
-    
+    <div class="form-block">
+        @using (Html.BeginForm("Search", "Home"))
+        {
+            <div class="form-group form-table">
+                @Html.TextBoxFor(x => x.Word, new {@class = "form-control input-field", placeholder = "Search", value="", style="width:25%; margin-right:20px"})
+                <button type="submit" class="btn btn-warning">Search</button>
+                </div>
+            
+        }
+    </div>
+
     <div class="anagram-results">
         <h4>Choose a word from the list to see its anagram(s):</h4>
         <table id="words-table" class="table table-hover table-responsive" >
@@ -32,9 +42,9 @@
             {
                 <tr>
                     <td>@((Model.PageIndex-1)*100+i+1)</td>
-                    <td>@Model[i].Content</td>
-                    <td>@Model[i].Type</td>
-                    <td>@Html.ActionLink("View Anagram", "Index", "Home", new {word = Model[i].Content}, new{@class="btn btn-link", @target="_blank"})</td>
+                    <td>@Model[i].Word</td>
+                    <td>@Model[i].Category</td>
+                    <td>@Html.ActionLink("View Anagram", "Index", "Home", new {word = Model[i].Word}, new{@class="btn btn-link", @target="_blank"})</td>
     
                 </tr>
             }

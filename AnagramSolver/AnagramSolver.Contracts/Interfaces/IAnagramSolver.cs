@@ -4,7 +4,7 @@ namespace AnagramSolver.Contracts;
 
 public interface IAnagramSolver
 {
-    List<Word> CheckForAnagram(string userInput);
-    List<Word> GetAllSourceWords();
+    List<WordModel> CheckForAnagram(string userInput);
+    List<WordModel> GetAllSourceWords();
 
 }

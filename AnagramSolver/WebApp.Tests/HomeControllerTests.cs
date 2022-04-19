@@ -1,14 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Net;
-using System.Security.Policy;
 using AnagramSolver.Contracts;
+using AnagramSolver.Contracts.Data;
 using AnagramSolver.Contracts.Models;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.AspNetCore.Routing;
 using Moq;
 using NUnit.Framework;
 using Shouldly;
@@ -24,12 +18,12 @@ public class HomeControllerTests
     private HomeController _controller;
     
     [SetUp]
-    public void Setup()
+    public void Setup(DataContext _context)
     {
         _mockRepository = new Mock<IWordRepository>();
-        _mockRepository.Setup(repo => repo.ReturnWordListFromSource()).Returns(new List<Word>());
+        _mockRepository.Setup(repo => repo.ReturnWordListFromSource()).Returns(new List<WordModel>());
         _anagramSolver = new AnagramSolver.BusinessLogic.AnagramSolver(_mockRepository.Object);
-        _controller = new HomeController(_anagramSolver);
+        _controller = new HomeController(_anagramSolver, _context);
     }
 
     [Test]
@@ -57,6 +51,6 @@ public class HomeControllerTests
     {
         var result = _controller.ViewAll(pageNumber: null);
         var viewResult = result.Result.ShouldBeOfType<ViewResult>();
-        viewResult.Model.ShouldBeOfType<PaginatedList<Word>>();
+        viewResult.Model.ShouldBeOfType<PaginatedList<WordModel>>();
     }
 }

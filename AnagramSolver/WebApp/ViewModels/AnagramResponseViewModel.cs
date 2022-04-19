@@ -5,5 +5,5 @@ namespace WebApp.ViewModels;
 public class AnagramResponseViewModel
 {
     public string UserWord { get; set; }
-    public List<Word> Anagrams { get; set; }
+    public List<WordModel> Anagrams { get; set; }
 }

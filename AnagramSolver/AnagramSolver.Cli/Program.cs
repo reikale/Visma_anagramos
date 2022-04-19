@@ -1,6 +1,8 @@
 ﻿using AnagramSolver.BusinessLogic;
 using AnagramSolver.Cli;
 using AnagramSolver.Contracts;
+using AnagramSolver.Contracts.Data;
+using AnagramSolver.Contracts.Models;
 
 // VARIABLES
 var appSettingsHandler = new AppSettingsHandler("appsettings.json");
