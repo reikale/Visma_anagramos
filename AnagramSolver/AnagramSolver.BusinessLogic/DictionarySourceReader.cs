@@ -35,4 +35,19 @@ public class DictionarySourceReader : IWordRepository
     {
         return new WordModel{Word = wordContent, Category = wordType};
     }
+
+    public void CacheWord(WordModel searchedWord, List<WordModel> listOfAnagrams)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool CheckForCache(WordModel searchedWord)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<WordModel> FindInCache(WordModel searchedWord)
+    {
+        throw new NotImplementedException();
+    }
 }

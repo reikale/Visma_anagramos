@@ -15,12 +15,19 @@ public class AnagramSolver : IAnagramSolver
     public List<WordModel> CheckForAnagram(string userInput)
     {
         var wrappedWord = new WordModel{Word = userInput};
-        var userWordCode = wrappedWord.GetHashCode();
-        var sourceWords = ReturnWordDictionary();
-        var listOfAnagrams = sourceWords.Where(x=>x.GetHashCode() == userWordCode).ToList();
-        return listOfAnagrams;
-    }
 
+        if (!_wordRepository.CheckForCache(wrappedWord))
+        {
+            var userWordCode = wrappedWord.GetHashCode();
+            var sourceWords = ReturnWordDictionary();
+            List<WordModel> listOfAnagrams = sourceWords.Where(x=>x.GetHashCode() == userWordCode).ToList();
+            
+            _wordRepository.CacheWord(wrappedWord, listOfAnagrams);
+            return listOfAnagrams;
+        }
+        return _wordRepository.FindInCache(wrappedWord);
+    }
+    
     private HashSet<WordModel> ReturnWordDictionary()
     {
         var allWordObjects = _wordRepository.ReturnWordListFromSource();

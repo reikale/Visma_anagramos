@@ -22,7 +22,6 @@ public class HomeController : Controller
         _context = context;
     }
     
-    // GET
     //[Route("/{word}")]
     [SuppressMessage("ReSharper.DPA", "DPA0001: Memory allocation issues")]
     public IActionResult Index(string word)
@@ -47,9 +46,7 @@ public class HomeController : Controller
     }
     public async Task<IActionResult> Search(string? word)
     {
-        var words = _context.Words.FromSqlRaw("SELECT * FROM dbo.Words WHERE Word LIKE '%'+@UserInput+'%'", new SqlParameter("@UserInput", word)).ToList();
-
-        //return foundWords;
+        var words = _context.Words.Where(x => x.Word == word).ToList();
         return View("Search", new WordSearchModel{Words = words}); 
     }
 }
