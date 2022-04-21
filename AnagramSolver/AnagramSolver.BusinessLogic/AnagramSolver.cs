@@ -27,7 +27,6 @@ public class AnagramSolver : IAnagramSolver
         }
         return _wordRepository.FindInCache(wrappedWord);
     }
-    
     private HashSet<WordModel> ReturnWordDictionary()
     {
         var allWordObjects = _wordRepository.ReturnWordListFromSource();

@@ -12,4 +12,5 @@ public class DataContext: DbContext
     public DbSet<WordModel> Words { get; set; }
     public DbSet<UserLog> UserLogs { get; set; }
     public DbSet<CachedWord> CachedWords { get; set; }
+    
 }
