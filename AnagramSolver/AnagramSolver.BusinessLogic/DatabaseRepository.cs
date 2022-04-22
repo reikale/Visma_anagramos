@@ -4,10 +4,10 @@ using AnagramSolver.Contracts.Models;
 
 namespace AnagramSolver.BusinessLogic;
 
-public class WordDatabaseReader : IWordRepository
+public class DatabaseRepository : IWordRepository
 {
     public DataContext _context;
-    public WordDatabaseReader(DataContext context)
+    public DatabaseRepository(DataContext context)
     {
         _context = context;
     }
@@ -15,12 +15,6 @@ public class WordDatabaseReader : IWordRepository
     public List<WordModel> ReturnWordListFromSource()
     {
         return _context.Words.ToList();
-    }
-
-    public bool CheckForCache(WordModel searchedWord)
-    {
-        var result =  _context.CachedWords.Where(x => x.SearchedWord == searchedWord.Word).FirstOrDefault();
-        return result != null;
     }
     public void CacheWord(WordModel searchedWord, List<WordModel> listOfAnagrams)
     {
@@ -37,13 +31,10 @@ public class WordDatabaseReader : IWordRepository
 
     public List<WordModel> FindInCache(WordModel searchedWord)
     {
-        
         var cacheList =  _context.CachedWords.Where(x => x.SearchedWord == searchedWord.Word).ToList();
-        List<WordModel> returnList = new List<WordModel>();
-        foreach (var cache in cacheList)
-        {
-            returnList.Add(_context.Words.Where(x => x.Id == cache.AnagramsId).FirstOrDefault());
-        }
+        List<int> wordsIds = cacheList.Select(x => x.AnagramsId).ToList();
+        List<WordModel> returnList = _context.Words.Where(x => wordsIds.Contains(x.Id)).ToList();
+
         return returnList;
     }
 }

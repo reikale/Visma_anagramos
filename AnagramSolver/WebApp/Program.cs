@@ -3,8 +3,6 @@ using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Data;
 using AnagramSolver.Contracts.Models;
 using Microsoft.EntityFrameworkCore;
-using WebApp.Controllers;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,16 +11,17 @@ var appsettingsConfig = builder.Configuration.GetSection("App");
 builder.Services.Configure<AppSettings>(appsettingsConfig);
 builder.Services.AddMvc();
 builder.Services.AddRazorPages();
-builder.Services.AddTransient<DictionarySourceReader>();
+builder.Services.AddTransient<TextFileRepository>();
 builder.Services.AddTransient<IAnagramSolver, AnagramSolver.BusinessLogic.AnagramSolver>();
 //builder.Services.AddSingleton<HomeController>();
 
 // To use SQL database:
-builder.Services.AddTransient<IWordRepository, WordDatabaseReader>();
+builder.Services.AddTransient<IWordRepository, DatabaseRepository>();
 // To use txt file as database:
 //builder.Services.AddTransient<IWordRepository, DictionarySourceReader>();
 
 builder.Services.AddCors();
+
 builder.Services.AddDbContext<DataContext>(options =>
 {
     string connectionString = builder.Configuration.GetConnectionString("WebAppContext");

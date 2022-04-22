@@ -1,4 +1,3 @@
-using AnagramSolver.Contracts.Data;
 
 namespace AnagramSolver.Contracts.Models;
 

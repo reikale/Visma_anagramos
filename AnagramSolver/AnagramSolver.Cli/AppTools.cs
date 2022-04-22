@@ -15,7 +15,7 @@ public class AppTools
         _uiTools = uiTools;
         _anagramSolver = anagramSolver;
     }
-    public async void StartProgram()
+    public void StartProgram()
     {
         string userInput = _uiTools.AskQuestion("Enter the word to get its anagram:");
         List<WordModel> result = new List<WordModel>();

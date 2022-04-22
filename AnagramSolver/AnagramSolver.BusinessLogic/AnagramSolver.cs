@@ -15,8 +15,9 @@ public class AnagramSolver : IAnagramSolver
     public List<WordModel> CheckForAnagram(string userInput)
     {
         var wrappedWord = new WordModel{Word = userInput};
-
-        if (!_wordRepository.CheckForCache(wrappedWord))
+        // ieskoti cache.
+        var cacheResults = _wordRepository.FindInCache(wrappedWord);
+        if (cacheResults.Count == 0)
         {
             var userWordCode = wrappedWord.GetHashCode();
             var sourceWords = ReturnWordDictionary();
@@ -25,7 +26,7 @@ public class AnagramSolver : IAnagramSolver
             _wordRepository.CacheWord(wrappedWord, listOfAnagrams);
             return listOfAnagrams;
         }
-        return _wordRepository.FindInCache(wrappedWord);
+        return cacheResults;
     }
     private HashSet<WordModel> ReturnWordDictionary()
     {

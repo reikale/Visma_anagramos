@@ -1,15 +1,14 @@
 using AnagramSolver.Contracts;
-using AnagramSolver.Contracts.Data;
 using AnagramSolver.Contracts.Models;
 
 namespace AnagramSolver.BusinessLogic;
-public class DictionarySourceReader : IWordRepository
+public class TextFileRepository : IWordRepository
 {
     private readonly AppSettings _appSettings;
     public const int _WORD_CONTENT = 2;
     public const int _WORD_TYPE = 1;
 
-    public DictionarySourceReader()
+    public TextFileRepository()
     {
         _appSettings = new AppSettingsHandler("appsettings.json").GetAppSettings();
     }
@@ -25,29 +24,25 @@ public class DictionarySourceReader : IWordRepository
         foreach (string line in data)
         {
             string[] lineContent = line.Split("\t");
-            string wordContent = lineContent[DictionarySourceReader._WORD_CONTENT];
-            string wordType = lineContent[DictionarySourceReader._WORD_TYPE];
+            string wordContent = lineContent[_WORD_CONTENT];
+            string wordType = lineContent[_WORD_TYPE];
             listOfSourceObjects.Add(CreateNewWordObject(wordContent, wordType));
         }
         return listOfSourceObjects.Distinct().ToList();
     }
-    private WordModel CreateNewWordObject(string wordContent, string wordType)
-    {
-        return new WordModel{Word = wordContent, Category = wordType};
-    }
 
     public void CacheWord(WordModel searchedWord, List<WordModel> listOfAnagrams)
     {
-        throw new NotImplementedException();
-    }
-
-    public bool CheckForCache(WordModel searchedWord)
-    {
-        throw new NotImplementedException();
+        Console.WriteLine("Word was cached");
     }
 
     public List<WordModel> FindInCache(WordModel searchedWord)
     {
-        throw new NotImplementedException();
+        return new List<WordModel>();
+    }
+
+    private WordModel CreateNewWordObject(string wordContent, string wordType)
+    {
+        return new WordModel{Word = wordContent, Category = wordType};
     }
 }

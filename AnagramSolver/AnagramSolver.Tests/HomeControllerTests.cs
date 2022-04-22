@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Data;
 using AnagramSolver.Contracts.Models;
@@ -33,11 +32,8 @@ public class HomeControllerTests
         // Assert
         var redirectToViewResult = result.ShouldBeOfType<ViewResult>();
         redirectToViewResult.ViewName.ShouldBe("Empty");
-
     }
-    // Noriu patikrinti kaip patikrinti kokį View grąžins jei url bus ~/ arba ~/zodis.
-    // Pirmu atveju turi grąžinti View "Empty", kitu atveju "Index".
-    // Niekur neradau kaip galiu testuoti url ir pagal tai patikrinti grąžinamus View.
+
     [Test]
     public void Index_ShouldWork_ReturnsIndexView()
     {

@@ -16,13 +16,11 @@ public class HomeController : Controller
 {
     private IAnagramSolver _anagramSolver;
     private DataContext _context;
-    private IWordRepository _wordRepository;
 
-    public HomeController(IAnagramSolver anagramSolver, DataContext context, IWordRepository wordRepository)
+    public HomeController(IAnagramSolver anagramSolver, DataContext context)
     {
         _anagramSolver = anagramSolver;
         _context = context;
-        _wordRepository = wordRepository;
     }
     
     //[Route("/{word}")]
