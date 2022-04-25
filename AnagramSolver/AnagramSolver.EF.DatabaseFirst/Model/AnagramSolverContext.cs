@@ -18,7 +18,7 @@ namespace AnagramSolver.EF.DatabaseFirst.Model
 
         public virtual DbSet<CachedWord> CachedWords { get; set; } = null!;
         public virtual DbSet<UserLog> UserLogs { get; set; } = null!;
-        public virtual DbSet<Word> Words { get; set; } = null!;
+        public virtual DbSet<WordModel> Words { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -55,7 +55,7 @@ namespace AnagramSolver.EF.DatabaseFirst.Model
                     .HasColumnName("UserIP");
             });
 
-            modelBuilder.Entity<Word>(entity =>
+            modelBuilder.Entity<WordModel>(entity =>
             {
                 entity.Property(e => e.Category).HasMaxLength(255);
 

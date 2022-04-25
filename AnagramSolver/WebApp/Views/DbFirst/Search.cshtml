@@ -1,0 +1,32 @@
+@model WebApp.ViewModels.DbFirstSearchViewModel
+
+@{
+    ViewBag.Title = "Search Results";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    int PageIndex = 1;
+}
+
+<h2>Search Results</h2>
+<table id="words-table" class="table table-hover table-responsive" >
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Word</th>
+        <th scope="col">Type</th>
+        <th scope="col">Word Anagram</th>
+                
+    </tr>
+    </thead>
+    <tbody>
+    @for (int i = 0; i < Model.Words.Count; i++)
+    {
+        <tr>
+            <td>@(PageIndex++)</td>
+            <td>@Model.Words[i].Word1</td>
+            <td>@Model.Words[i].Category</td>
+            <td>@Html.ActionLink("View Anagram", "Index", "DbFirst", new {word = Model.Words[i].Word1}, new{@class="btn btn-link", @target="_blank"})</td>
+    
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,63 @@
+@model WebApp.PaginatedList<AnagramSolver.EF.DatabaseFirst.Model.WordModel>
+
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="content">
+    <div class="form-block">
+        @using (Html.BeginForm("Search", "DbFirst"))
+        {
+            <div class="form-group form-table">
+                @Html.TextBoxFor(x => x.Word, new {@class = "form-control input-field", placeholder = "Search", value="", style="width:25%; margin-right:20px"})
+                <button type="submit" class="btn btn-warning">Search</button>
+                </div>
+            
+        }
+    </div>
+
+    <div class="anagram-results">
+        <h4>Choose a word from the list to see its anagram(s):</h4>
+        <table id="words-table" class="table table-hover table-responsive" >
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Word</th>
+                <th scope="col">Type</th>
+                <th scope="col">Word Anagram</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@((Model.PageIndex-1)*100+i+1)</td>
+                    <td>@Model[i].Word1</td>
+                    <td>@Model[i].Category</td>
+                    <td>@Html.ActionLink("View Anagram", "Index", "DbFirst", new {word = Model[i].Word1}, new{@class="btn btn-link", @target="_blank"})</td>
+    
+                </tr>
+            }
+            </tbody>
+        </table>
+        <div class="pagination" >
+            @if (Model.HasPreviousPage) { 
+                @Html.ActionLink("Previous", "ViewAll", "DbFirst", new { pageNumber = Model.PageIndex - 1 }, new {@class = "btn btn-secondary"})
+            }
+            @if (Model.HasNextPage) { 
+                @Html.ActionLink("Next", "ViewAll", "DbFirst", new { pageNumber = Model.PageIndex + 1 }, new {@class = "btn btn-secondary"})
+            }
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

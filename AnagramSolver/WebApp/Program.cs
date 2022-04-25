@@ -2,6 +2,8 @@ using AnagramSolver.BusinessLogic;
 using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Data;
 using AnagramSolver.Contracts.Models;
+using AnagramSolver.EF.DatabaseFirst;
+using AnagramSolver.EF.DatabaseFirst.Model;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,8 @@ builder.Services.Configure<AppSettings>(appsettingsConfig);
 builder.Services.AddMvc();
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<TextFileRepository>();
+builder.Services.AddTransient<DbFirstAnagramSolver>();
+builder.Services.AddTransient<DBFirstRepository>();
 builder.Services.AddTransient<IAnagramSolver, AnagramSolver.BusinessLogic.AnagramSolver>();
 //builder.Services.AddSingleton<HomeController>();
 
@@ -22,10 +26,17 @@ builder.Services.AddTransient<IWordRepository, DatabaseRepository>();
 
 builder.Services.AddCors();
 
-builder.Services.AddDbContext<DataContext>(options =>
+// DB First :
+builder.Services.AddDbContext<AnagramSolverContext>(options =>
 {
     string connectionString = builder.Configuration.GetConnectionString("WebAppContext");
     options.UseSqlServer(connectionString);
+});
+// Previous connection string:
+builder.Services.AddDbContext<DataContext>(options =>
+{
+  string connectionString = builder.Configuration.GetConnectionString("WebAppContext");
+  options.UseSqlServer(connectionString);
 });
 
 var app = builder.Build();

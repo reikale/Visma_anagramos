@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace AnagramSolver.EF.DatabaseFirst.Model
 {
-    public partial class Word
+    public partial class WordModel
     {
-        public Word()
+        public WordModel()
         {
             CachedWords = new HashSet<CachedWord>();
         }
@@ -15,5 +15,9 @@ namespace AnagramSolver.EF.DatabaseFirst.Model
         public int Id { get; set; }
 
         public virtual ICollection<CachedWord> CachedWords { get; set; }
+        public override int GetHashCode()
+        {
+            return string.Concat(Word1.ToLower().OrderBy(c => c).ToArray()).GetHashCode();
+        }
     }
 }

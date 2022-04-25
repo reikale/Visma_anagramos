@@ -9,6 +9,6 @@ namespace AnagramSolver.EF.DatabaseFirst.Model
         public string SearchedWord { get; set; } = null!;
         public int AnagramsId { get; set; }
 
-        public virtual Word Anagrams { get; set; } = null!;
+        public virtual WordModel Anagrams { get; set; } = null!;
     }
 }
