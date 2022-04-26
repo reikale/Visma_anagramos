@@ -1,4 +1,4 @@
-using AnagramSolver.EF.DatabaseFirst.Model;
+using AnagramSolver.Contracts.Models;
 
 namespace WebApp.ViewModels;
 

@@ -1,20 +1,19 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Net;
+using AnagramSolver.Contracts;
 using AnagramSolver.EF.DatabaseFirst.Model;
-using AnagramSolver.EF.DatabaseFirst;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApp.ViewModels;
-using WordModel = AnagramSolver.EF.DatabaseFirst.Model.WordModel;
 
 namespace WebApp.Controllers;
 
 public class DbFirstController : Controller
 {
-    private DbFirstAnagramSolver _anagramSolver;
+    private IAnagramSolver _anagramSolver;
     private AnagramSolverContext _context;
 
-    public DbFirstController(DbFirstAnagramSolver anagramSolver, AnagramSolverContext context)
+    public DbFirstController(IAnagramSolver anagramSolver, AnagramSolverContext context)
     {
         _anagramSolver = anagramSolver;
         _context = context;
@@ -24,7 +23,7 @@ public class DbFirstController : Controller
     [SuppressMessage("ReSharper.DPA", "DPA0001: Memory allocation issues")]
     public IActionResult Index(string word)
     {
-        List<WordModel> anagrams = _anagramSolver.CheckForAnagram(word);
+        List<AnagramSolver.Contracts.Models.WordModel> anagrams = _anagramSolver.CheckForAnagram(word);
         
         // log search to table:
         string hostName = Dns.GetHostName();
@@ -34,7 +33,7 @@ public class DbFirstController : Controller
             UserIp = curentIP,
             SearchString = word,
             SearchTime = DateTime.Now,
-            FoundAnagrams = string.Join( ", ", anagrams.Select(x => x.Word1))
+            FoundAnagrams = string.Join( ", ", anagrams.Select(x => x.Word))
         });
         _context.SaveChanges();
 
@@ -49,17 +48,18 @@ public class DbFirstController : Controller
     
     public async Task<IActionResult> ViewAll(int? pageNumber)
     { 
-        var words= _anagramSolver.GetAllSourceWords();
+        List<AnagramSolver.Contracts.Models.WordModel> words = _anagramSolver.GetAllSourceWords();
 
         if (pageNumber == null) pageNumber = 1;
 
         int pageSize = 100;
-        return View(await PaginatedList<WordModel>.CreateAsync(words, pageNumber ?? 1, pageSize));
+        return View(await PaginatedList<AnagramSolver.Contracts.Models.WordModel>.CreateAsync(words, pageNumber ?? 1, pageSize));
     }
     public async Task<IActionResult> Search(string? word)
     {
         var words = _context.Words.Where(x => x.Word1.Contains(word)).ToList();
-        return View("Search", new DbFirstSearchViewModel {Words = words}); 
+        var finalWords = words.Select(x=> new AnagramSolver.Contracts.Models.WordModel{Word = x.Word1, Category = x.Category, Id = x.Id}).ToList();
+        return View("Search", new DbFirstSearchViewModel {Words = finalWords}); 
     }
     public IActionResult DeleteData()
     {

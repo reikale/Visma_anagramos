@@ -8,28 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32811a50-13ee-4804-9547-e0ade2a62083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/DBFirstRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/DbFirstAnagramSolver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Controllers/DbFirstController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstIndexViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstSearchViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstShowSeachesViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/DeleteData.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/Empty.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/Search.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/ShowSearches.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/ViewAll.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.idea.Visma_anagramos.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.Visma_anagramos.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/AnagramSolver.EF.DatabaseFirst.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Model/AnagramSolverContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Model/CachedWord.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Model/UserLog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Model/Word.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/DBFirstRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/DbFirstAnagramSolver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Model/AnagramSolverContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Contexts/AnagramSolverContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/DbFirstController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/DbFirstController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstIndexViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstIndexViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstSearchViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstSearchViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/DbFirst/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/DbFirst/Search.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/Search.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/DbFirst/ViewAll.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/ViewAll.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +248,7 @@
       <workItem from="1650522593461" duration="9680000" />
       <workItem from="1650610304858" duration="35000" />
       <workItem from="1650610903248" duration="12198000" />
-      <workItem from="1650869116523" duration="9599000" />
+      <workItem from="1650869116523" duration="15217000" />
     </task>
     <servers />
   </component>

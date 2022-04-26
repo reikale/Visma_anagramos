@@ -14,10 +14,7 @@ builder.Services.Configure<AppSettings>(appsettingsConfig);
 builder.Services.AddMvc();
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<TextFileRepository>();
-builder.Services.AddTransient<DbFirstAnagramSolver>();
-builder.Services.AddTransient<DBFirstRepository>();
 builder.Services.AddTransient<IAnagramSolver, AnagramSolver.BusinessLogic.AnagramSolver>();
-//builder.Services.AddSingleton<HomeController>();
 
 // To use SQL database:
 builder.Services.AddTransient<IWordRepository, DatabaseRepository>();

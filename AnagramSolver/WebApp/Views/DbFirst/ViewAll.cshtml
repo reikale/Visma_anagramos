@@ -1,4 +1,5 @@
-@model WebApp.PaginatedList<AnagramSolver.EF.DatabaseFirst.Model.WordModel>
+@using AnagramSolver.Contracts.Models
+@model WebApp.PaginatedList<WordModel>
 
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
@@ -40,9 +41,9 @@
             {
                 <tr>
                     <td>@((Model.PageIndex-1)*100+i+1)</td>
-                    <td>@Model[i].Word1</td>
+                    <td>@Model[i].Word</td>
                     <td>@Model[i].Category</td>
-                    <td>@Html.ActionLink("View Anagram", "Index", "DbFirst", new {word = Model[i].Word1}, new{@class="btn btn-link", @target="_blank"})</td>
+                    <td>@Html.ActionLink("View Anagram", "Index", "DbFirst", new {word = Model[i].Word}, new{@class="btn btn-link", @target="_blank"})</td>
     
                 </tr>
             }
