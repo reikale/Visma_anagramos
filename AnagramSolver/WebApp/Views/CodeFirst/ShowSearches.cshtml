@@ -1,0 +1,34 @@
+@model WebApp.ViewModels.CodeFirstShowSearchesViewModel;
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="log-results">
+    <h4>Search Log</h4>
+    <table id="log-table" class="table table-hover table-responsive" >
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">User IP</th>
+            <th scope="col">Searched Word</th>
+            <th scope="col">Search Time</th>
+            <th scope="col">Found Anagrams</th>
+                
+        </tr>
+        </thead>
+        <tbody>
+        @for (int i = 0; i < Model.Entries.Count; i++)
+        {
+            <tr>
+                <td>@(i+1)</td>
+                <td>@Model.Entries[i].UserIP</td>
+                <td>@Model.Entries[i].SearchString</td>
+                <td>@Model.Entries[i].SearchTime</td>
+                <td>@Model.Entries[i].FoundAnagrams</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

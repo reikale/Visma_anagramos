@@ -28,7 +28,7 @@ public class DbFirstController : Controller
         // log search to table:
         string hostName = Dns.GetHostName();
         string curentIP = Dns.GetHostByName(hostName).AddressList[1].ToString();
-        _context.UserLogs.Add(new AnagramSolver.EF.DatabaseFirst.Model.UserLog
+        _context.UserLogs.Add(new UserLog
         {
             UserIp = curentIP,
             SearchString = word,

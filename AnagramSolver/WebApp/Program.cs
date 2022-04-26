@@ -2,8 +2,8 @@ using AnagramSolver.BusinessLogic;
 using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Data;
 using AnagramSolver.Contracts.Models;
-using AnagramSolver.EF.DatabaseFirst;
 using AnagramSolver.EF.DatabaseFirst.Model;
+using EF.CodeFirst.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,7 +35,12 @@ builder.Services.AddDbContext<DataContext>(options =>
   string connectionString = builder.Configuration.GetConnectionString("WebAppContext");
   options.UseSqlServer(connectionString);
 });
-
+// Code First:
+builder.Services.AddDbContext<DatabaseContext>(options =>
+{
+    string connectionString = builder.Configuration.GetConnectionString("DatabaseContext");
+    options.UseSqlServer(connectionString);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -59,13 +64,13 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
    name: "default",
-   pattern: "{controller=Home}/{action=Empty}");
+   pattern: "{controller=CodeFirst}/{action=Empty}");
 app.MapControllerRoute(
     name: "index",
-    pattern: "{controller=Home}/{action=Index}/{word}");
+    pattern: "{controller=CodeFirst}/{action=Index}/{word}");
 app.MapControllerRoute(
-    name: "index",
-    pattern: "{controller=Home}/{action=Search}/{word}");
+    name: "search",
+    pattern: "{controller=CodeFirst}/{action=Search}/{word}");
 
 app.MapRazorPages();
 

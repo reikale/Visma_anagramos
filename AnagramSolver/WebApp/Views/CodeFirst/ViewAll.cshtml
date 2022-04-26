@@ -1,14 +1,13 @@
-@using AnagramSolver.Contracts.Models
-@model WebApp.PaginatedList<WordModel>
+@model WebApp.PaginatedList<EF.CodeFirst.Model.Words>
 
 @{
+    ViewBag.Title = "title";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-
 <div class="content">
     <div class="form-block">
-        @using (Html.BeginForm("Search", "DbFirst"))
+        @using (Html.BeginForm("Search", "CodeFirst"))
         {
             <div class="form-group form-table">
                 @Html.TextBoxFor(x => x.Word, new {@class = "form-control input-field", placeholder = "Search", value="", style="width:25%; margin-right:20px"})
@@ -37,7 +36,7 @@
                     <td>@((Model.PageIndex-1)*100+i+1)</td>
                     <td>@Model[i].Word</td>
                     <td>@Model[i].Category</td>
-                    <td>@Html.ActionLink("View Anagram", "Index", "DbFirst", new {word = Model[i].Word}, new{@class="btn btn-link", @target="_blank"})</td>
+                    <td>@Html.ActionLink("View Anagram", "Index", "CodeFirst", new {word = Model[i].Word}, new{@class="btn btn-link", @target="_blank"})</td>
     
                 </tr>
             }
@@ -45,12 +44,11 @@
         </table>
         <div class="pagination" >
             @if (Model.HasPreviousPage) { 
-                @Html.ActionLink("Previous", "ViewAll", "DbFirst", new { pageNumber = Model.PageIndex - 1 }, new {@class = "btn btn-secondary"})
+                @Html.ActionLink("Previous", "ViewAll", "CodeFirst", new { pageNumber = Model.PageIndex - 1 }, new {@class = "btn btn-secondary"})
             }
             @if (Model.HasNextPage) { 
-                @Html.ActionLink("Next", "ViewAll", "DbFirst", new { pageNumber = Model.PageIndex + 1 }, new {@class = "btn btn-secondary"})
+                @Html.ActionLink("Next", "ViewAll", "CodeFirst", new { pageNumber = Model.PageIndex + 1 }, new {@class = "btn btn-secondary"})
             }
         </div>
     </div>
 </div>
-

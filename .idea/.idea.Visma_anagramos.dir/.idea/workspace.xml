@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5717c97c-831b-41d5-8be8-07469d35c335" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Visma_anagramos.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Visma_anagramos.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver/AnagramSolver.EF.DatabaseFirst/AnagramSolver.EF.DatabaseFirst.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver/AnagramSolver.EF.DatabaseFirst/Model/AnagramSolverContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver/AnagramSolver.EF.DatabaseFirst/Model/CachedWord.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver/AnagramSolver.EF.DatabaseFirst/Model/UserLog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver/AnagramSolver.EF.DatabaseFirst/Model/Word.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver/AnagramSolver.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver/AnagramSolver.sln" afterDir="false" />
-    </list>
+    <list default="true" id="5717c97c-831b-41d5-8be8-07469d35c335" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +39,7 @@
       <workItem from="1650610614157" duration="231000" />
       <workItem from="1650869026621" duration="14000" />
       <workItem from="1650869062309" duration="8000" />
+      <workItem from="1650955010543" duration="27000" />
     </task>
     <servers />
   </component>

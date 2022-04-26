@@ -258,6 +258,7 @@
       <ProjectReference Include="..\AnagramSolver.BusinessLogic\AnagramSolver.BusinessLogic.csproj" />
       <ProjectReference Include="..\AnagramSolver.Cli\AnagramSolver.Cli.csproj" />
       <ProjectReference Include="..\AnagramSolver.Contracts.Tests\AnagramSolver.Contracts.Tests.csproj" />
+      <ProjectReference Include="..\AnagramSolver.EF.CodeFirst\AnagramSolver.EF.CodeFirst.csproj" />
       <ProjectReference Include="..\AnagramSolver.EF.DatabaseFirst\AnagramSolver.EF.DatabaseFirst.csproj" />
     </ItemGroup>
 

@@ -8,18 +8,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32811a50-13ee-4804-9547-e0ade2a62083" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.EF.CodeFirst/AnagramSolver.EF.CodeFirst.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.EF.CodeFirst/Data/DatabaseContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.EF.CodeFirst/Model/CachedWords.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.EF.CodeFirst/Model/UserLog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AnagramSolver.EF.CodeFirst/Model/Words.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/Controllers/CodeFirstController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/CodeFirstEmptyViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/CodeFirstIndexViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/CodeFirstSearchViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/ViewModels/CodeFirstShowSearchesViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/Views/CodeFirst/Empty.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/Views/CodeFirst/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/Views/CodeFirst/Load.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/Views/CodeFirst/Search.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/Views/CodeFirst/ShowSearches.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/Views/CodeFirst/ViewAll.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.Visma_anagramos.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.Visma_anagramos.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnagramSolver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.BusinessLogic/AnagramSolver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/DBFirstRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/DbFirstAnagramSolver.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Model/AnagramSolverContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Contexts/AnagramSolverContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnagramSolver.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AnagramSolver.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/Controllers/DbFirstController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/DbFirstController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Pages/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstIndexViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstIndexViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstSearchViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/DbFirstSearchViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/DbFirst/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/DbFirst/Search.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/Search.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/Views/DbFirst/ViewAll.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/DbFirst/ViewAll.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +85,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/89aa24538c3ae4d61273c8cf6d4621d4d55bde55b9f76a9e4735339a4c82d1e6/ShouldlyCoreExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8b17eea7411eb1ee7e80413e8229dc445ba073ab591c18196db8b55712aabb/ControllerFactoryProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97892987fb2a9bc79b06cbf7fbedf98a5ef75c6a588983bbc038064cfaba/Select.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a52b594732f8426d3f1d4a85aaebb561a8a1834abe49eea9e1821e6bb682e/SimpleWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9b481fc8f61495566a71bc5727f43a5e726fb276470099219041c8c95313c8/BeforeAndAfterTestCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9d4f4ac7db6d2c5d183ab2d92602280ed4349fd6e6a1b6313546b3d01fdab5/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
@@ -106,6 +120,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f7b5343aa441bec3fe62d441bdb4e22da67238298a9c9f6d9b6d82779cc61f2/TypeInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/faf4a4b37056302738a46865827c3d2d3b6b1b977603a3932b0cd749921118/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AnagramSolver.Contracts/Interfaces/IWordRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnagramSolver.EF.CodeFirst/Model/CachedWords.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnagramSolver.EF.CodeFirst/Model/UserLog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnagramSolver.EF.CodeFirst/Model/Words.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AnagramSolver.EF.DatabaseFirst/Model/Word.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -249,6 +266,7 @@
       <workItem from="1650610304858" duration="35000" />
       <workItem from="1650610903248" duration="12198000" />
       <workItem from="1650869116523" duration="15217000" />
+      <workItem from="1650955070265" duration="13812000" />
     </task>
     <servers />
   </component>
@@ -271,6 +289,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApp/Controllers/CodeFirstController.cs</url>
+          <line>61</line>
+          <properties documentPath="C:\Users\inga.reikale\Documents\GitHub\Visma_anagramos\AnagramSolver\WebApp\Controllers\CodeFirstController.cs" initialLine="61" containingFunctionPresentation="method 'Empty'">
+            <startOffsets>
+              <option value="1990" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2029" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
