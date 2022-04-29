@@ -25,7 +25,6 @@
             <td>@Model.Words[i].Word</td>
             <td>@Model.Words[i].Category</td>
             <td>@Html.ActionLink("View Anagram", "Index", "Home", new {word = Model.Words[i].Word}, new{@class="btn btn-link", @target="_blank"})</td>
-    
         </tr>
     }
     </tbody>

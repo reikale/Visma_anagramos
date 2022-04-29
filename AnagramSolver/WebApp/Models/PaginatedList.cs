@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http.Features;
-using Microsoft.EntityFrameworkCore;
 namespace WebApp;
 
 public class PaginatedList<T> : List<T>
@@ -17,7 +11,7 @@ public class PaginatedList<T> : List<T>
         PageIndex = pageIndex;
         TotalPages = (int)Math.Ceiling(count / (double)pageSize);
 
-        this.AddRange(items);
+        AddRange(items);
     }
 
     public bool HasPreviousPage => PageIndex > 1;

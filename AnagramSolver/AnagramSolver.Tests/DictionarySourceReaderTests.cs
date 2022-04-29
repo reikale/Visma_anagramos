@@ -15,18 +15,18 @@ public class DictionarySourceReaderTests
     public void Init()
     {
         _dictionarySourceReader = new Mock<IWordRepository>();
-        _dictionarySourceReader.Setup(x => x.ReturnWordListFromSource()).Returns(new List<WordModel>
+        _dictionarySourceReader.Setup(x => x.ReturnWordListFromSource(true)).Returns(new List<Words>
         {
-            new WordModel{Word = "pilka", Category= ""},
-            new WordModel{Word = "pilkais", Category=""},
-            new WordModel{Word = "pilkas", Category=""},
-            new WordModel{Word = "pilki", Category=""},
-            new WordModel{Word = "pilko", Category=""},
-            new WordModel{Word = "pilkos", Category=""},
-            new WordModel{Word = "pilku", Category=""},
-            new WordModel{Word = "plika", Category=""},
-            new WordModel{Word = "plikas", Category=""},
-            new WordModel{Word = "paliks", Category=""},
+            new Words{Word = "pilka", Category= ""},
+            new Words{Word = "pilkais", Category=""},
+            new Words{Word = "pilkas", Category=""},
+            new Words{Word = "pilki", Category=""},
+            new Words{Word = "pilko", Category=""},
+            new Words{Word = "pilkos", Category=""},
+            new Words{Word = "pilku", Category=""},
+            new Words{Word = "plika", Category=""},
+            new Words{Word = "plikas", Category=""},
+            new Words{Word = "paliks", Category=""},
         
         });
     }
@@ -35,7 +35,7 @@ public class DictionarySourceReaderTests
     public void ReturnWordListFromSource_ShouldWork_LengthIs()
     {
         //Act
-        var result = _dictionarySourceReader.Object.ReturnWordListFromSource().Count;
+        var result = _dictionarySourceReader.Object.ReturnWordListFromSource(true).Count;
         //Assert
         result.ShouldBe(10);
     }

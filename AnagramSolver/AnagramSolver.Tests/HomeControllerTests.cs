@@ -14,14 +14,16 @@ public class HomeControllerTests
 {
     private AnagramSolver.BusinessLogic.AnagramSolver _anagramSolver;
     private Mock<IWordRepository> _mockRepository;
+    private Mock<ICache> _mockCache;
     private HomeController _controller;
     
     [SetUp]
     public void Setup(DataContext _context)
     {
         _mockRepository = new Mock<IWordRepository>();
-        _mockRepository.Setup(repo => repo.ReturnWordListFromSource()).Returns(new List<WordModel>());
-        _anagramSolver = new AnagramSolver.BusinessLogic.AnagramSolver(_mockRepository.Object);
+        _mockCache = new Mock<ICache>();
+        _mockRepository.Setup(repo => repo.ReturnWordListFromSource(true)).Returns(new List<Words>());
+        _anagramSolver = new AnagramSolver.BusinessLogic.AnagramSolver(_mockRepository.Object, _mockCache.Object);
         _controller = new HomeController(_anagramSolver, _context);
     }
 
@@ -47,6 +49,6 @@ public class HomeControllerTests
     {
         var result = _controller.ViewAll(pageNumber: null);
         var viewResult = result.Result.ShouldBeOfType<ViewResult>();
-        viewResult.Model.ShouldBeOfType<PaginatedList<WordModel>>();
+        viewResult.Model.ShouldBeOfType<PaginatedList<Words>>();
     }
 }

@@ -23,7 +23,7 @@ public class DbFirstController : Controller
     [SuppressMessage("ReSharper.DPA", "DPA0001: Memory allocation issues")]
     public IActionResult Index(string word)
     {
-        List<AnagramSolver.Contracts.Models.WordModel> anagrams = _anagramSolver.CheckForAnagram(word);
+        List<AnagramSolver.Contracts.Models.Words> anagrams = _anagramSolver.CheckForAnagram(word, true);
         
         // log search to table:
         string hostName = Dns.GetHostName();
@@ -48,17 +48,17 @@ public class DbFirstController : Controller
     
     public async Task<IActionResult> ViewAll(int? pageNumber)
     { 
-        List<AnagramSolver.Contracts.Models.WordModel> words = _anagramSolver.GetAllSourceWords();
+        List<AnagramSolver.Contracts.Models.Words> words = _anagramSolver.GetAllSourceWords(true);
 
         if (pageNumber == null) pageNumber = 1;
 
         int pageSize = 100;
-        return View(await PaginatedList<AnagramSolver.Contracts.Models.WordModel>.CreateAsync(words, pageNumber ?? 1, pageSize));
+        return View(await PaginatedList<AnagramSolver.Contracts.Models.Words>.CreateAsync(words, pageNumber ?? 1, pageSize));
     }
     public async Task<IActionResult> Search(string? word)
     {
         var words = _context.Words.Where(x => x.Word1.Contains(word)).ToList();
-        var finalWords = words.Select(x=> new AnagramSolver.Contracts.Models.WordModel{Word = x.Word1, Category = x.Category, Id = x.Id}).ToList();
+        var finalWords = words.Select(x=> new AnagramSolver.Contracts.Models.Words{Word = x.Word1, Category = x.Category, Id = x.Id}).ToList();
         return View("Search", new DbFirstSearchViewModel {Words = finalWords}); 
     }
     public IActionResult DeleteData()

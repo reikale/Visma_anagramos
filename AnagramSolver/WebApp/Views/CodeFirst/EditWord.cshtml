@@ -1,0 +1,23 @@
+@model WebApp.DictionaryModification;
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2 class="alert-info">Add a new word to the dictionary</h2>
+<div class="form-block">
+    @using (Html.BeginForm("Save", "CodeFirst"))
+    {
+        <div class="form-group form-table">
+            @Html.LabelFor(x => x.Word, "Enter a word you want to change", new{@class="form-label label-field", style="font-size:2em"})
+            @Html.TextBoxFor(x => x.Word, new{@class="form-control input-field", placeholder="e.g. druskė", style="font-size:1.4em"})
+        </div>
+        <div class="form-group form-table">
+            @Html.LabelFor(x => x.Category, "Enter a word to replace with", new{@class="form-label label-field", style="font-size:2em"})
+            @Html.TextBoxFor(x => x.Category, new{@class="form-control input-field", placeholder="e.g. druska", style="font-size:1.4em"})
+        </div>
+        @Html.Hidden("ModificationType", "Edit")
+        <button type="submit" class="btn btn-warning">Proceed</button>
+    }
+</div>

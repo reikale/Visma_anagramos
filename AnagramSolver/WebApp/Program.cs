@@ -14,12 +14,15 @@ builder.Services.Configure<AppSettings>(appsettingsConfig);
 builder.Services.AddMvc();
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<TextFileRepository>();
+builder.Services.AddTransient<DnsRepository>();
+builder.Services.AddTransient<AnagramRepository>();
 builder.Services.AddTransient<IAnagramSolver, AnagramSolver.BusinessLogic.AnagramSolver>();
 
 // To use SQL database:
-builder.Services.AddTransient<IWordRepository, DatabaseRepository>();
+builder.Services.AddTransient<IWordRepository, AnagramRepository>();
+builder.Services.AddTransient<ICache, CacheRepository>();
 // To use txt file as database:
-//builder.Services.AddTransient<IWordRepository, DictionarySourceReader>();
+//builder.Services.AddTransient<IWordRepository, TextFileRepository>();
 
 builder.Services.AddCors();
 

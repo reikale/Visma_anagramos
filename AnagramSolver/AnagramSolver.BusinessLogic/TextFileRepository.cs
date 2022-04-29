@@ -17,10 +17,10 @@ public class TextFileRepository : IWordRepository
     {
         return File.ReadLines(_appSettings.WordsRepoSource.PathToWordsRepo);
     }
-    public List<WordModel> ReturnWordListFromSource()
+    public List<Words> ReturnWordListFromSource(bool shouldUseDataContext)
     {
         var data = ReadDataFromFile();
-        List<WordModel> listOfSourceObjects = new List<WordModel>();
+        List<Words> listOfSourceObjects = new List<Words>();
         foreach (string line in data)
         {
             string[] lineContent = line.Split("\t");
@@ -31,18 +31,8 @@ public class TextFileRepository : IWordRepository
         return listOfSourceObjects.Distinct().ToList();
     }
 
-    public void CacheWord(WordModel searchedWord, List<WordModel> listOfAnagrams)
+    private Words CreateNewWordObject(string wordContent, string wordType)
     {
-        Console.WriteLine("Word was cached");
-    }
-
-    public List<WordModel> FindInCache(WordModel searchedWord)
-    {
-        return new List<WordModel>();
-    }
-
-    private WordModel CreateNewWordObject(string wordContent, string wordType)
-    {
-        return new WordModel{Word = wordContent, Category = wordType};
+        return new Words{Word = wordContent, Category = wordType};
     }
 }

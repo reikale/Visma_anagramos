@@ -1,12 +1,9 @@
-using System.Data;
-using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Data;
 using AnagramSolver.Contracts.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using WebApp.ViewModels;
 
@@ -16,6 +13,7 @@ public class HomeController : Controller
 {
     private IAnagramSolver _anagramSolver;
     private DataContext _context;
+    private const bool _USE_DATA_CONTEXT = true;
 
     public HomeController(IAnagramSolver anagramSolver, DataContext context)
     {
@@ -27,9 +25,8 @@ public class HomeController : Controller
     [SuppressMessage("ReSharper.DPA", "DPA0001: Memory allocation issues")]
     public IActionResult Index(string word)
     {
-        List<WordModel> anagrams = _anagramSolver.CheckForAnagram(word);
+        List<Words> anagrams = _anagramSolver.CheckForAnagram(word, _USE_DATA_CONTEXT);
         
-        // log search to table:
         string hostName = Dns.GetHostName();
         string curentIP = Dns.GetHostByName(hostName).AddressList[1].ToString();
         _context.UserLogs.Add(new UserLog
@@ -52,12 +49,10 @@ public class HomeController : Controller
     
     public async Task<IActionResult> ViewAll(int? pageNumber)
     { 
-        var words= _anagramSolver.GetAllSourceWords();
-
+        var words= _anagramSolver.GetAllSourceWords(true);
         if (pageNumber == null) pageNumber = 1;
-
         int pageSize = 100;
-        return View(await PaginatedList<WordModel>.CreateAsync(words, pageNumber ?? 1, pageSize));
+        return View(await PaginatedList<Words>.CreateAsync(words, pageNumber ?? 1, pageSize));
     }
     public async Task<IActionResult> Search(string? word)
     {

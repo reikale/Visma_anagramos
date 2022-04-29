@@ -1,4 +1,3 @@
-using AnagramSolver.Contracts;
 using AnagramSolver.Contracts.Models;
 
 namespace AnagramSolver.Cli;
@@ -21,7 +20,7 @@ public class UITools
         }
         return userInput;
     }
-    public void ShowTheResult(string userInput, List<WordModel>? resultList)
+    public void ShowTheResult(string userInput, List<Words>? resultList)
     {
         Console.Clear();
         if (resultList.Count != 0)
@@ -43,7 +42,7 @@ public class UITools
         Console.WriteLine($"Sorry, but there is no anagram for the word '{userInput}'");
     }
 
-    private void AnagramResults(string userInput, List<WordModel>? resultList)
+    private void AnagramResults(string userInput, List<Words>? resultList)
     {
         Console.Write($"The anagram(s) for word '{userInput}': ");
         int numberOfAnagrams = resultList.Count;

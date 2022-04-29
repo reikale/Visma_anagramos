@@ -10,21 +10,22 @@ namespace AnagramSolver.BusinessLogic.Tests;
 public class AnagramSolverTests
 {
     private Mock<IWordRepository> _mockRepository;
+    private Mock<ICache> _mockCache;
     private AnagramSolver _anotherAnagramSolver;
 
     [SetUp]
     public void Init()
     {
         _mockRepository = new Mock<IWordRepository>();
-        _mockRepository.Setup(repo => repo.ReturnWordListFromSource()).Returns(new List<WordModel>
+        _mockRepository.Setup(repo => repo.ReturnWordListFromSource(true)).Returns(new List<Words>
         {
-            new WordModel {Word = "pilkas", Category = ""},
-            new WordModel {Word = "plikas", Category = ""},
-            new WordModel {Word = "paliks", Category = ""},
-            new WordModel {Word = "paltas", Category = ""},
+            new Words {Word = "pilkas", Category = ""},
+            new Words {Word = "plikas", Category = ""},
+            new Words {Word = "paliks", Category = ""},
+            new Words {Word = "paltas", Category = ""},
 
         });
-        _anotherAnagramSolver = new AnagramSolver(_mockRepository.Object);
+        _anotherAnagramSolver = new AnagramSolver(_mockRepository.Object, _mockCache.Object);
     }
     
     [Test]
@@ -33,7 +34,7 @@ public class AnagramSolverTests
         //Arrange
         string input = "ailksp";
         //Act
-        var resultList = _anotherAnagramSolver.CheckForAnagram(input);
+        var resultList = _anotherAnagramSolver.CheckForAnagram(input, true);
         
         //Assert
         resultList.Any(x => x.Word == "pilkas").ShouldBeTrue();
@@ -48,7 +49,7 @@ public class AnagramSolverTests
     public void CheckForAnagram_ShouldFail_AnagramNotFound(string input, string expected)
     {
         //Act
-        var resultList = _anotherAnagramSolver.CheckForAnagram(input);
+        var resultList = _anotherAnagramSolver.CheckForAnagram(input, true);
         var result = resultList.Any(x => x.Word == expected);
         
         //Assert
@@ -61,7 +62,7 @@ public class AnagramSolverTests
         //Arrange
         string input = "pilkas";
         //Act
-        var resultList = _anotherAnagramSolver.CheckForAnagram(input);
+        var resultList = _anotherAnagramSolver.CheckForAnagram(input, true);
 
         //Assert
         resultList.Where(x => x.Word == "pilkas").ToList().Count.ShouldBe(1);

@@ -12,6 +12,7 @@ public class DatabaseContext: DbContext
     public DbSet<CachedWords> CachedWords { get; set; }
     public DbSet<UserLog> UserLogs { get; set; }
     public DbSet<Words> Words { get; set; }
+    public DbSet<UserInfo> UsersInfo { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

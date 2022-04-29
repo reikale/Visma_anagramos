@@ -8,17 +8,15 @@ namespace AnagramSolver.Cli;
 public class AppTools
 {
     private readonly UITools _uiTools;
-    private readonly BusinessLogic.AnagramSolver _anagramSolver;
 
-    public AppTools(UITools uiTools, BusinessLogic.AnagramSolver anagramSolver)
+    public AppTools(UITools uiTools)
     {
         _uiTools = uiTools;
-        _anagramSolver = anagramSolver;
     }
     public void StartProgram()
     {
         string userInput = _uiTools.AskQuestion("Enter the word to get its anagram:");
-        List<WordModel> result = new List<WordModel>();
+        List<Words> result = new List<Words>();
         try
         {
             using (var client = new HttpClient())
@@ -30,7 +28,7 @@ public class AppTools
                 var clientResult = clientRresponse.Result;
                 if (clientResult.IsSuccessStatusCode)
                 {
-                    var readTask = clientResult.Content.ReadFromJsonAsync<List<WordModel>>();
+                    var readTask = clientResult.Content.ReadFromJsonAsync<List<Words>>();
                     readTask.Wait();
                     result = readTask.Result;
                 }

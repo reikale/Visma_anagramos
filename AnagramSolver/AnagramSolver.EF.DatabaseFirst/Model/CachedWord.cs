@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿
 namespace AnagramSolver.EF.DatabaseFirst.Model
 {
     public partial class CachedWord

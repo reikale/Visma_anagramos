@@ -1,0 +1,14 @@
+@model WebApp.ViewModels.ErrorViewModel;
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">@Model.Message</h2>
+<h4>If you want to keep searching for anagrams please do one of the followings:</h4>
+<ul>
+    <li>@Html.ActionLink("Suggest a new word to the dictionary (+5 searches)", "AddWord", "CodeFirst", null, new {@class = "btn btn-link"})</li>
+    <li>@Html.ActionLink("Edit a word in a dictionary (+1 search)", "EditWord", "CodeFirst", null, new {@class = "btn btn-link"})</li>
+    <li>@Html.ActionLink("Remove a word from the dictionary (you'll have even less searches)", "RemoveWord", "CodeFirst", null, new {@class = "btn btn-link"})</li>
+</ul>

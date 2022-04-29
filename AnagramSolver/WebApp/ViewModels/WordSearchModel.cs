@@ -4,5 +4,5 @@ namespace WebApp.ViewModels;
 
 public class WordSearchModel
 {
-    public List<WordModel>? Words { get; set; }
+    public List<Words>? Words { get; set; }
 }
